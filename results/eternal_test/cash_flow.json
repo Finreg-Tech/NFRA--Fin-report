@@ -1,0 +1,570 @@
+{
+    "statement_type": "cash_flow",
+    "category": "consolidated",
+    "metadata": {
+        "statement_title": "Consolidated Statement of Cash Flows",
+        "period": "for the year ended March 31, 2025",
+        "reporting_dates": [
+            "2025-03-31",
+            "2024-03-31"
+        ]
+    },
+    "rows": [
+        {
+            "activity_type": "operating",
+            "raw_label": "Profit / (loss) before tax",
+            "normalized_label": "profit_before_tax",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 697.0,
+                "2024-03-31": 291.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Liabilities written back",
+            "normalized_label": "liabilities_written_back",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -10.0,
+                "2024-03-31": -9.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Depreciation on property, plant and equipment and depreciation on right-of-use assets",
+            "normalized_label": "depreciation",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 576.0,
+                "2024-03-31": 284.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Amortisation on intangible assets",
+            "normalized_label": "amortisation_intangible_assets",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 287.0,
+                "2024-03-31": 242.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Provision for doubtful debts and advances",
+            "normalized_label": "provision_doubtful_debts_advances",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 71.0,
+                "2024-03-31": 68.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Bad debts written-off",
+            "normalized_label": "bad_debts_written_off",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": null,
+                "2024-03-31": 1.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Gain on termination of lease contracts",
+            "normalized_label": "gain_termination_lease_contracts",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -3.0,
+                "2024-03-31": -10.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Share-based payment expense",
+            "normalized_label": "share_based_payment_expense",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 798.0,
+                "2024-03-31": 515.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Loss on sale of property, plant and equipment (net) / asset written off",
+            "normalized_label": "loss_sale_property_plant_equipment",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 11.0,
+                "2024-03-31": 1.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Net gain on mutual funds",
+            "normalized_label": "net_gain_mutual_funds",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -151.0,
+                "2024-03-31": -129.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Interest income on government securities",
+            "normalized_label": "interest_income_government_securities",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -100.0,
+                "2024-03-31": -107.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Interest income on debentures or bonds",
+            "normalized_label": "interest_income_debentures_bonds",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -436.0,
+                "2024-03-31": -320.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Amortisation of premium / (discount) on government securities",
+            "normalized_label": "amortisation_premium_discount_government_securities",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -89.0,
+                "2024-03-31": -41.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Amortisation of premium / (discount) on bonds",
+            "normalized_label": "amortisation_premium_discount_bonds",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -4.0,
+                "2024-03-31": 0.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Interest expense",
+            "normalized_label": "interest_expense",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 4.0,
+                "2024-03-31": 2.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Gain on disposal of investment",
+            "normalized_label": "gain_disposal_investment",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 0.0,
+                "2024-03-31": -1.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Interest on lease liabilities",
+            "normalized_label": "interest_lease_liabilities",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 147.0,
+                "2024-03-31": 67.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Interest income on bank deposits and others",
+            "normalized_label": "interest_income_bank_deposits_others",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -262.0,
+                "2024-03-31": -220.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Interest income on income tax refund",
+            "normalized_label": "interest_income_tax_refund",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -17.0,
+                "2024-03-31": -1.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Operating profit / (loss) before working capital changes",
+            "normalized_label": "operating_profit_before_working_capital_changes",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 1519.0,
+                "2024-03-31": 633.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "- Trade receivables",
+            "normalized_label": "trade_receivables",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -1117.0,
+                "2024-03-31": -348.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "- Other financial assets",
+            "normalized_label": "other_financial_assets",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -226.0,
+                "2024-03-31": -293.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "- Other assets",
+            "normalized_label": "other_assets",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -586.0,
+                "2024-03-31": 134.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "- Inventory",
+            "normalized_label": "inventory",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -88.0,
+                "2024-03-31": -5.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "- Financial liabilities and other liabilities",
+            "normalized_label": "financial_liabilities_other_liabilities",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 274.0,
+                "2024-03-31": 419.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "- Provisions",
+            "normalized_label": "provisions",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 21.0,
+                "2024-03-31": 0.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "- Trade payables",
+            "normalized_label": "trade_payables",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 629.0,
+                "2024-03-31": 211.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Cash generated from / (used in) operations",
+            "normalized_label": "cash_generated_operations",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 426.0,
+                "2024-03-31": 751.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Income taxes refund / (paid) (net)",
+            "normalized_label": "income_taxes_refund_paid_net",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -118.0,
+                "2024-03-31": -105.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Purchase of property, plant and equipment (including capital work-in-progress, capital advances and capital creditors)",
+            "normalized_label": "purchase_property_plant_equipment",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -936.0,
+                "2024-03-31": -215.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from sale of property, plant and equipment",
+            "normalized_label": "proceeds_sale_property_plant_equipment",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 5.0,
+                "2024-03-31": 13.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Investments in bank deposits (having original maturity of more than 3 months)",
+            "normalized_label": "investments_bank_deposits",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -7697.0,
+                "2024-03-31": -1944.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from maturity of bank deposits (having original maturity of more than 3 months)",
+            "normalized_label": "proceeds_maturity_bank_deposits",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 2942.0,
+                "2024-03-31": 5938.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from redemption of mutual fund units",
+            "normalized_label": "proceeds_redemption_mutual_fund_units",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 46738.0,
+                "2024-03-31": 29509.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Investment in mutual fund units",
+            "normalized_label": "investment_mutual_fund_units",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -47326.0,
+                "2024-03-31": -27010.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Acquisition of businesses, net of cash acquired (refer note 28)",
+            "normalized_label": "acquisition_businesses_net_cash_acquired",
+            "note_reference": "28",
+            "values": {
+                "2025-03-31": -2005.0,
+                "2024-03-31": null
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Purchase of non-current investments",
+            "normalized_label": "purchase_non_current_investments",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 0.0,
+                "2024-03-31": null
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Sale of non current investments",
+            "normalized_label": "sale_non_current_investments",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": null,
+                "2024-03-31": 1.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Investment in government securities",
+            "normalized_label": "investment_government_securities",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -648.0,
+                "2024-03-31": -2420.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from maturity of government securities",
+            "normalized_label": "proceeds_maturity_government_securities",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 65.0,
+                "2024-03-31": 935.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from redemption of debentures or bonds",
+            "normalized_label": "proceeds_redemption_debentures_bonds",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 50.0,
+                "2024-03-31": null
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Investment in debentures or bonds",
+            "normalized_label": "investment_debentures_bonds",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": null,
+                "2024-03-31": -5772.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Loan received back",
+            "normalized_label": "loan_received_back",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": null,
+                "2024-03-31": 0.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Interest received",
+            "normalized_label": "interest_received",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 819.0,
+                "2024-03-31": 618.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Proceeds from issue of equity shares",
+            "normalized_label": "proceeds_issue_equity_shares",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 8501.0,
+                "2024-03-31": 23.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Borrowing repaid during the year",
+            "normalized_label": "borrowing_repaid",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": null,
+                "2024-03-31": -40.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Transaction cost paid on issue of shares",
+            "normalized_label": "transaction_cost_issue_shares",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -54.0,
+                "2024-03-31": -1.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Share based payment on cash settlement of option (fractional shares)",
+            "normalized_label": "share_based_payment_cash_settlement",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 0.0,
+                "2024-03-31": 0.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Amount collected by ESOP trust on exercise of employee stock options (net of tax)",
+            "normalized_label": "amount_collected_esop_trust",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 4.0,
+                "2024-03-31": 9.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Payment of principal portion of lease liabilities",
+            "normalized_label": "payment_principal_lease_liabilities",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -258.0,
+                "2024-03-31": -129.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Payment of interest portion of lease liabilities",
+            "normalized_label": "payment_interest_lease_liabilities",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -147.0,
+                "2024-03-31": -67.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Interest paid",
+            "normalized_label": "interest_paid",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -4.0,
+                "2024-03-31": -2.0
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Net foreign exchange difference",
+            "normalized_label": "net_foreign_exchange_difference",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": 0.0,
+                "2024-03-31": -1.0
+            }
+        }
+    ],
+    "totals": {
+        "net_cash_from_operating": {
+            "2025-03-31": 308.0,
+            "2024-03-31": 646.0
+        },
+        "net_cash_from_investing": {
+            "2025-03-31": -7993.0,
+            "2024-03-31": -347.0
+        },
+        "net_cash_from_financing": {
+            "2025-03-31": 8042.0,
+            "2024-03-31": -207.0
+        },
+        "net_increase_in_cash": {
+            "2025-03-31": 357.0,
+            "2024-03-31": 92.0
+        },
+        "opening_cash_balance": {
+            "2025-03-31": 309.0,
+            "2024-03-31": 218.0
+        },
+        "closing_cash_balance": {
+            "2025-03-31": 666.0,
+            "2024-03-31": 309.0
+        }
+    }
+}

@@ -1,0 +1,282 @@
+{
+    "statement_type": "profit_and_loss",
+    "category": "standalone",
+    "metadata": {
+        "statement_title": null,
+        "period": null
+    },
+    "rows": [
+        {
+            "section": "income",
+            "raw_label": "Revenue from operations",
+            "normalized_label": "revenue_from_operations",
+            "note_reference": "31",
+            "values": {
+                "current_year": 142509.01,
+                "previous_year": 126233.36
+            }
+        },
+        {
+            "section": "income",
+            "raw_label": "Other income (net)",
+            "normalized_label": "other_income_net",
+            "note_reference": "32",
+            "values": {
+                "current_year": 5669.21,
+                "previous_year": 5329.7
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Cost of raw materials and components consumed",
+            "normalized_label": "cost_of_raw_materials_and_components_consumed",
+            "note_reference": "",
+            "values": {
+                "current_year": 15219.9,
+                "previous_year": 11621.48
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Construction materials consumed",
+            "normalized_label": "construction_materials_consumed",
+            "note_reference": "",
+            "values": {
+                "current_year": 45457.97,
+                "previous_year": 43031.68
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Purchase of stock-in-trade",
+            "normalized_label": "purchase_of_stock_in_trade",
+            "note_reference": "",
+            "values": {
+                "current_year": 1409.9,
+                "previous_year": 1078.54
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Stores, spares and loose tools consumed",
+            "normalized_label": "stores_spares_and_loose_tools_consumed",
+            "note_reference": "",
+            "values": {
+                "current_year": 3060.7,
+                "previous_year": 3613.78
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Sub-contracting charges",
+            "normalized_label": "sub_contracting_charges",
+            "note_reference": "",
+            "values": {
+                "current_year": 35741.21,
+                "previous_year": 30814.82
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Changes in inventories of finished goods, stock-in-trade and work-in-progress",
+            "normalized_label": "changes_in_inventories_of_finished_goods_stock_in_trade_and_work_in_progress",
+            "note_reference": "",
+            "values": {
+                "current_year": 1089.23,
+                "previous_year": 411.83
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Other manufacturing, construction and operating expenses",
+            "normalized_label": "other_manufacturing_construction_and_operating_expenses",
+            "note_reference": "",
+            "values": {
+                "current_year": 14676.41,
+                "previous_year": 13442.55
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Employee benefits expense",
+            "normalized_label": "employee_benefits_expense",
+            "note_reference": "34",
+            "values": {
+                "current_year": 10380.08,
+                "previous_year": 9040.16
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Sales, administration and other expenses",
+            "normalized_label": "sales_administration_and_other_expenses",
+            "note_reference": "35",
+            "values": {
+                "current_year": 3885.36,
+                "previous_year": 3449.24
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Finance costs",
+            "normalized_label": "finance_costs",
+            "note_reference": "36",
+            "values": {
+                "current_year": 2195.46,
+                "previous_year": 2405.83
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Depreciation, amortisation, impairment and obsolescence",
+            "normalized_label": "depreciation_amortisation_impairment_and_obsolescence",
+            "note_reference": "37",
+            "values": {
+                "current_year": 1963.02,
+                "previous_year": 1753.17
+            }
+        },
+        {
+            "section": "tax",
+            "raw_label": "Current tax",
+            "normalized_label": "current_tax",
+            "note_reference": "44(a)",
+            "values": {
+                "current_year": 2849.97,
+                "previous_year": 2207.96
+            }
+        },
+        {
+            "section": "tax",
+            "raw_label": "Deferred tax",
+            "normalized_label": "deferred_tax",
+            "note_reference": "44(a)",
+            "values": {
+                "current_year": -146.93,
+                "previous_year": -191.4
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Gain/(loss) on remeasurement of the defined benefits plan",
+            "normalized_label": "gain_loss_on_remeasurement_of_the_defined_benefits_plan",
+            "note_reference": "",
+            "values": {
+                "current_year": -266.31,
+                "previous_year": 13.61
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Income tax (expenses)/income on remeasurements of the defined benefits plan",
+            "normalized_label": "income_tax_expenses_income_on_remeasurements_of_the_defined_benefits_plan",
+            "note_reference": "",
+            "values": {
+                "current_year": 67.02,
+                "previous_year": -3.51
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Debt instruments through Other comprehensive income",
+            "normalized_label": "debt_instruments_through_other_comprehensive_income",
+            "note_reference": "",
+            "values": {
+                "current_year": 264.26,
+                "previous_year": 171.92
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Income tax (expenses)/income on debt instruments through Other comprehensive income",
+            "normalized_label": "income_tax_expenses_income_on_debt_instruments_through_other_comprehensive_income",
+            "note_reference": "",
+            "values": {
+                "current_year": -60.46,
+                "previous_year": -39.34
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Exchange differences in translating the financial statements of foreign operations",
+            "normalized_label": "exchange_differences_in_translating_the_financial_statements_of_foreign_operations",
+            "note_reference": "",
+            "values": {
+                "current_year": -15.57,
+                "previous_year": -6.93
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Income tax (expenses)/income on exchange differences in translating the financial statements of foreign operations",
+            "normalized_label": "income_tax_expenses_income_on_exchange_differences_in_translating_the_financial_statements_of_foreign_operations",
+            "note_reference": "",
+            "values": {
+                "current_year": 3.92,
+                "previous_year": 1.74
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Effective portion of gains/(losses) on hedging instruments in a cash flow hedge",
+            "normalized_label": "effective_portion_of_gains_losses_on_hedging_instruments_in_a_cash_flow_hedge",
+            "note_reference": "",
+            "values": {
+                "current_year": 164.92,
+                "previous_year": -234.42
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Income tax (expenses)/income on effective portion of gains/(losses) on hedging instruments in a cash flow hedge",
+            "normalized_label": "income_tax_expenses_income_on_effective_portion_of_gains_losses_on_hedging_instruments_in_a_cash_flow_hedge",
+            "note_reference": "",
+            "values": {
+                "current_year": -41.56,
+                "previous_year": 50.26
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Cost of hedging reserve",
+            "normalized_label": "cost_of_hedging_reserve",
+            "note_reference": "",
+            "values": {
+                "current_year": 191.13,
+                "previous_year": 0.12
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Income tax (expenses)/income on cost of hedging reserve",
+            "normalized_label": "income_tax_expenses_income_on_cost_of_hedging_reserve",
+            "note_reference": "",
+            "values": {
+                "current_year": -48.1,
+                "previous_year": -0.03
+            }
+        }
+    ],
+    "totals": {
+        "total_income": {
+            "current_year": 148178.22,
+            "previous_year": 131563.06
+        },
+        "total_expenses": {
+            "current_year": 135079.24,
+            "previous_year": 120663.08
+        },
+        "profit_before_tax": {
+            "current_year": 13573.76,
+            "previous_year": 11347.97
+        },
+        "profit_after_tax": {
+            "current_year": 10870.72,
+            "previous_year": 9331.41
+        },
+        "basic_eps": {
+            "current_year": 79.06,
+            "previous_year": 67.14
+        }
+    }
+}

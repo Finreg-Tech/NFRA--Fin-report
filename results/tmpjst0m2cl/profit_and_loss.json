@@ -1,0 +1,182 @@
+{
+    "statement_type": "profit_and_loss",
+    "category": "standalone",
+    "metadata": {
+        "statement_title": null,
+        "period": null
+    },
+    "rows": [
+        {
+            "section": "income",
+            "raw_label": "Revenue from Operations",
+            "normalized_label": "revenue_from_operations",
+            "note_reference": "34",
+            "values": {
+                "current_year": 49710.76,
+                "previous_year": 46456.5
+            }
+        },
+        {
+            "section": "income",
+            "raw_label": "Other Income",
+            "normalized_label": "other_income",
+            "note_reference": "35",
+            "values": {
+                "current_year": 2860.35,
+                "previous_year": 10089.28
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Fuel Cost",
+            "normalized_label": "fuel_cost",
+            "note_reference": "",
+            "values": {
+                "current_year": 26595.21,
+                "previous_year": 26714.83
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Purchase of Stock-in-trade and Power",
+            "normalized_label": "purchase_of_stock_in_trade_and_power",
+            "note_reference": "36",
+            "values": {
+                "current_year": 83.56,
+                "previous_year": 131.97
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Transmission Charges",
+            "normalized_label": "transmission_charges",
+            "note_reference": "",
+            "values": {
+                "current_year": 362.01,
+                "previous_year": 399.75
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Employee Benefits Expense",
+            "normalized_label": "employee_benefits_expense",
+            "note_reference": "37",
+            "values": {
+                "current_year": 687.99,
+                "previous_year": 589.12
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Finance Costs",
+            "normalized_label": "finance_costs",
+            "note_reference": "38",
+            "values": {
+                "current_year": 3207.39,
+                "previous_year": 3404.4
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Depreciation and Amortisation Expense",
+            "normalized_label": "depreciation_and_amortisation_expense",
+            "note_reference": "4.5",
+            "values": {
+                "current_year": 3878.56,
+                "previous_year": 3771.96
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Other Expenses",
+            "normalized_label": "other_expenses",
+            "note_reference": "39",
+            "values": {
+                "current_year": 2472.7,
+                "previous_year": 1953.08
+            }
+        },
+        {
+            "section": "tax",
+            "raw_label": "Current Tax",
+            "normalized_label": "current_tax",
+            "note_reference": "40",
+            "values": {
+                "current_year": null,
+                "previous_year": null
+            }
+        },
+        {
+            "section": "tax",
+            "raw_label": "Deferred Tax Charge / (Credit)",
+            "normalized_label": "deferred_tax_charge_credit",
+            "note_reference": "40",
+            "values": {
+                "current_year": 3723.84,
+                "previous_year": -51.28
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Remeasurement gain on defined benefit plan",
+            "normalized_label": "remeasurement_gain_on_defined_benefit_plan",
+            "note_reference": "59",
+            "values": {
+                "current_year": 19.17,
+                "previous_year": 9.21
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Income tax impact",
+            "normalized_label": "income_tax_impact",
+            "note_reference": "40",
+            "values": {
+                "current_year": -4.82,
+                "previous_year": -2.33
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Net movement on Effective portion of Cash Flow Hedges",
+            "normalized_label": "net_movement_on_effective_portion_of_cash_flow_hedges",
+            "note_reference": "",
+            "values": {
+                "current_year": -12.51,
+                "previous_year": -46.04
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Income tax impact",
+            "normalized_label": "income_tax_impact",
+            "note_reference": "40",
+            "values": {
+                "current_year": null,
+                "previous_year": 11.59
+            }
+        }
+    ],
+    "totals": {
+        "total_income": {
+            "current_year": 52571.11,
+            "previous_year": 56545.78
+        },
+        "total_expenses": {
+            "current_year": 37287.42,
+            "previous_year": 36965.11
+        },
+        "profit_before_tax": {
+            "current_year": 15283.69,
+            "previous_year": 19580.67
+        },
+        "profit_after_tax": {
+            "current_year": 11559.85,
+            "previous_year": 19631.95
+        },
+        "basic_eps": {
+            "current_year": 28.74,
+            "previous_year": 48.53
+        }
+    }
+}
