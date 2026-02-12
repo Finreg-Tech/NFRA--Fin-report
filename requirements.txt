@@ -1,0 +1,5 @@
+pymupdf
+scikit-learn
+joblib
+llama-parse
+python-dotenv
