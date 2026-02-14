@@ -199,7 +199,11 @@ def calculate_overall_score(validation_results: Dict) -> Dict:
     for flag in compliance_flags:
         severity = flag.get("severity", "")
         status = flag.get("status", "")
-        if severity == "critical" or status == "FAIL":
+        if status == "DATA_GAP":
+            # DATA_GAP: Note referenced but missing from ingestion - no penalty
+            # This is expected when Notes to Accounts ingestion is intentionally skipped
+            pass
+        elif severity == "critical" or status == "FAIL":
             base_score -= 15
         elif severity == "warning" or status == "WARNING":
             base_score -= 10
@@ -253,6 +257,7 @@ def generate_summary(validation_results: Dict, extracted_data: Optional[Dict] = 
     
     critical_issues = []
     warnings = []
+    data_gaps = []
     
     for error in quant_errors:
         if error.get("passed") == False or error.get("status") == "FAIL":
@@ -271,12 +276,20 @@ def generate_summary(validation_results: Dict, extracted_data: Optional[Dict] = 
         
         # Check if failure is due to missing notes context
         is_missing_notes = flag.get("is_missing_notes", False)
+        is_data_gap = flag.get("is_data_gap", False)
         note_ref = flag.get("note_reference")
         
         if not is_missing_notes:
             is_missing_notes, note_ref = check_missing_notes_context(flag, extracted_data)
         
-        if severity == "critical" or flag.get("status") == "FAIL":
+        # Handle DATA_GAP status separately - track as data gaps, not critical issues
+        if flag.get("status") == "DATA_GAP" or is_data_gap:
+            data_gaps.append({
+                "text": f"Data Gap ({rule_id}): {desc[:60]}",
+                "note_reference": note_ref,
+                "is_data_gap": True
+            })
+        elif severity == "critical" or flag.get("status") == "FAIL":
             if is_missing_notes:
                 if note_ref:
                     issue_text = f"Rule Failure ({rule_id}): {desc[:50]}"
@@ -325,8 +338,10 @@ def generate_summary(validation_results: Dict, extracted_data: Optional[Dict] = 
     return {
         "critical_issues_count": len(critical_issues),
         "warnings_count": len(warnings),
+        "data_gaps_count": len(data_gaps),
         "critical_issues": critical_issues,
-        "warnings": warnings
+        "warnings": warnings,
+        "data_gaps": data_gaps
     }
 
 
@@ -407,6 +422,7 @@ def format_report_markdown(
     lines.append(f"| **Grade** | {grade} |")
     lines.append(f"| **Status** | {status_emoji} {status.replace('_', ' ')} |")
     lines.append(f"| **Critical Issues** | {summary['critical_issues_count']} |")
+    lines.append(f"| **Data Gaps** | {summary.get('data_gaps_count', 0)} |")
     lines.append(f"| **Warnings** | {summary['warnings_count']} |")
     lines.append("")
     
@@ -484,6 +500,29 @@ def format_report_markdown(
             lines.append(f"| {line_item} | {standard} | ✅ Pass |")
         lines.append("")
         lines.append(f"*{len(passed_validations)} items validated successfully.*")
+        lines.append("")
+    
+    # =========================================================================
+    # Scope & Data Gaps Section
+    # =========================================================================
+    data_gaps = summary.get("data_gaps", [])
+    if data_gaps:
+        lines.append("---")
+        lines.append("")
+        lines.append("## 📋 Scope & Data Gaps")
+        lines.append("")
+        lines.append("The following items could not be validated due to missing data:")
+        lines.append("")
+        
+        for gap in data_gaps:
+            if isinstance(gap, dict):
+                lines.append(f"- {gap.get('text', str(gap))}")
+                lines.append(f"  - *Reason:* Notes to Accounts were not included in this run.")
+            else:
+                lines.append(f"- {gap}")
+                lines.append(f"  - *Reason:* Notes to Accounts were not included in this run.")
+        lines.append("")
+        lines.append("> **Note:** These gaps do not affect the compliance score. Re-run with Notes to Accounts for full validation.")
         lines.append("")
     
     # Critical Issues Section

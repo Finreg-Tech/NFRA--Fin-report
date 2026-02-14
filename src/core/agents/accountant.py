@@ -57,17 +57,15 @@ def llm_compliance_check(row_label, row_data, rule_context, note_text, standard_
     note_reference = row_data.get('note_reference')
     
     # Handle missing notes context - if note_reference exists but note_text is None
+    # Use DATA_GAP status instead of FAIL to avoid heavy penalty for intentionally skipped ingestion
     if note_reference and note_text is None:
         return {
-            "status": "FAIL",
-            "evidence": f"[MISSING NOTES CONTEXT] Validation could not be completed because "
-                       f"the text for Note {note_reference} was not found in the ingested "
-                       f"statements (BS, PL, CF only). The disclosure requirements of {standard_code} "
-                       f"cannot be verified without the corresponding note text.",
+            "status": "DATA_GAP",
+            "evidence": f"[DATA_GAP] Note {note_reference} was referenced in the statement but is missing from current ingestion. Compliance cannot be verified.",
             "reasoning": f"Note {note_reference} is referenced but its text content was not "
                         f"extracted from the financial statements. This is typically because "
                         f"Notes to Accounts are not included in the primary statement sections.",
-            "is_missing_notes": True,
+            "is_data_gap": True,
             "note_reference": note_reference
         }
     
@@ -183,10 +181,22 @@ def accountant_node(state: AgentState) -> AgentState:
                 "item": label,
                 "description": row.get("raw_label", label),
                 "status": "FAIL",
-                "severity": "critical" if result.get("is_missing_notes") else "high",
+                "severity": "high",
                 "evidence": result["evidence"],
                 "reasoning": result.get("reasoning", ""),
-                "is_missing_notes": result.get("is_missing_notes", False),
+                "note_reference": result.get("note_reference")
+            })
+        elif result["status"] == "DATA_GAP":
+            # Data gap due to intentionally skipped notes ingestion - use low severity
+            compliance_flags.append({
+                "rule_id": f"{standard_code}_{label}",
+                "item": label,
+                "description": row.get("raw_label", label),
+                "status": "DATA_GAP",
+                "severity": "info",
+                "evidence": result["evidence"],
+                "reasoning": result.get("reasoning", ""),
+                "is_data_gap": True,
                 "note_reference": result.get("note_reference")
             })
         elif result["status"] == "PASS":

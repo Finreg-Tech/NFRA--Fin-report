@@ -328,7 +328,7 @@ def quant_node(state: AgentState) -> AgentState:
     pl_data = extracted.get("profit_loss")
     cf_data = extracted.get("cash_flow")
     
-    errors: List[Dict[str, Any]] = []
+    all_results: List[Dict[str, Any]] = []
     warnings: List[Dict[str, Any]] = []
     
     # ------------------------------------
@@ -336,7 +336,7 @@ def quant_node(state: AgentState) -> AgentState:
     # ------------------------------------
     if not bs_data:
         logger.error("Quant: No balance_sheet data found in extracted_data")
-        errors.append({
+        all_results.append({
             "check_name": "data_availability",
             "passed": False,
             "message": "Balance sheet data is missing from extracted_data"
@@ -344,8 +344,8 @@ def quant_node(state: AgentState) -> AgentState:
     else:
         # Check A: Accounting Equation
         eq_result = check_accounting_equation(bs_data)
+        all_results.append(eq_result)
         if not eq_result["passed"]:
-            errors.append(eq_result)
             logger.warning("Quant: %s", eq_result["message"])
         else:
             logger.info("Quant: %s", eq_result["message"])
@@ -357,8 +357,8 @@ def quant_node(state: AgentState) -> AgentState:
             check_vertical_consistency_equity
         ]:
             result = check_fn(bs_data)
+            all_results.append(result)
             if not result["passed"]:
-                errors.append(result)
                 logger.warning("Quant: %s", result["message"])
             else:
                 logger.info("Quant: %s", result["message"])
@@ -376,8 +376,8 @@ def quant_node(state: AgentState) -> AgentState:
     # Cash balance consistency (BS vs CF)
     cash_result = check_cash_balance_consistency(bs_data, cf_data)
     if cash_result:
+        all_results.append(cash_result)
         if not cash_result["passed"]:
-            errors.append(cash_result)
             logger.warning("Quant: %s", cash_result["message"])
         else:
             logger.info("Quant: %s", cash_result["message"])
@@ -385,8 +385,8 @@ def quant_node(state: AgentState) -> AgentState:
     # PAT calculation (PL)
     pat_result = check_pat_calculation(pl_data)
     if pat_result:
+        all_results.append(pat_result)
         if not pat_result["passed"]:
-            errors.append(pat_result)
             logger.warning("Quant: %s", pat_result["message"])
         else:
             logger.info("Quant: %s", pat_result["message"])
@@ -401,8 +401,8 @@ def quant_node(state: AgentState) -> AgentState:
             "risk_alerts": []
         }
     
-    # Store errors
-    state["validation_results"]["quant_errors"] = errors
+    # Store all check results (passed and failed)
+    state["validation_results"]["quant_errors"] = all_results
     
     # Store variance warnings in risk_alerts (they're not errors, just flags)
     existing_alerts = state["validation_results"].get("risk_alerts", [])
@@ -421,9 +421,13 @@ def quant_node(state: AgentState) -> AgentState:
     
     state["processing_status"] = "quant_validated"
     
+    failed_count = sum(1 for r in all_results if not r.get("passed", True))
+    passed_count = len(all_results) - failed_count
+    
     logger.info(
-        "Quant: Validation complete - %d errors, %d variance warnings",
-        len(errors),
+        "Quant: Validation complete - %d passed, %d failed, %d variance warnings",
+        passed_count,
+        failed_count,
         len(warnings)
     )
     
