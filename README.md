@@ -1,17 +1,27 @@
 # Fin-LLM-NFRA
 
-# NFRA - ML-Powered PDF Page Classification System
+# NFRA - Financial Statement Compliance Validation System
 
-**Date:** February 12, 2026
+**Date:** February 14, 2026
 
 ---
 
 ## What This System Does
 
-Automatically identifies and extracts **financial statement pages** from annual report PDFs using Machine Learning.
+A **multi-agent AI system** that validates financial statements against **Ind AS (Indian Accounting Standards)** compliance requirements using LangGraph, RAG, and LLM-powered analysis.
 
-**Input:** Annual Report PDF (300+ pages)  
-**Output:** Separate markdown files for each financial statement type
+**Input:** Annual Report PDF  
+**Output:** Comprehensive compliance validation report (Markdown + JSON)
+
+### Key Capabilities
+
+| Feature | Description |
+|---------|-------------|
+| **PDF Extraction** | ML-powered page classification + LlamaParse table extraction |
+| **Mathematical Validation** | Automated balance checks, ratio analysis |
+| **Ind AS Compliance** | Knowledge Graph + RAG-based standard verification |
+| **Risk Assessment** | Financial health indicators and red flags |
+| **Professional Reports** | Detailed Markdown reports with grades and recommendations |
 
 ---
 
@@ -23,369 +33,101 @@ Automatically identifies and extracts **financial statement pages** from annual 
 pip install -r requirements.txt
 ```
 
-### Usage
+### Environment Variables
 
-**Two processing modes available:**
+Create a `.env` file:
 
-| Script | Model | Description |
-|--------|-------|-------------|
-| `Single_model.py` | Logistic Regression | Fast, single model classification |
-| `category_segmentation.py` | Ensemble (LR + RF) | Higher recall, union of both models |
-
-**Classify only (preview pages without LlamaParse):**
-```bash
-cd Preprocessing
-python Single_model.py "path/to/annual_report.pdf" --classify
-python category_segmentation.py "path/to/annual_report.pdf" --classify
+```env
+OPENAI_API_KEY=your_openai_key
+LLAMA_CLOUD_API_KEY=your_llamaparse_key
+API_HOST=0.0.0.0
+API_PORT=8000
 ```
 
-**Full processing (classify + extract markdown):**
+### Start the API Server
+
 ```bash
-cd Preprocessing
-python Single_model.py "path/to/annual_report.pdf"
-python category_segmentation.py "path/to/annual_report.pdf"
+uvicorn src.api.server:app --host 0.0.0.0 --port 8000
 ```
 
-Output files are saved to: `output/<pdf_name>/`
+### Validate a Financial Report
+
+```bash
+curl -X POST "http://localhost:8000/validate_report" \
+  -F "file=@annual_report.pdf"
+```
 
 ---
 
-## The Problem We Solve
+## System Architecture
 
-Annual reports contain many sections, but we only need **4 types of financial statements**:
-
-| Category | What It Contains |
-|----------|------------------|
-| **Balance Sheet (BS)** | Assets, Liabilities, Equity |
-| **Profit & Loss (PL)** | Revenue, Expenses, Net Income |
-| **Cash Flow** | Operating, Investing, Financing Activities |
-| **Notes** | Accounting Policies, Disclosures |
-
-Manually finding these pages in 300+ page documents is slow and error-prone. **Our ML models automate this.**
-
----
-
-## How the ML Models Identify Pages
-
-### Single Model Mode (Single_model.py)
-Uses **Logistic Regression** classifier for fast, accurate classification.
-
-### Ensemble Mode (category_segmentation.py)
-Uses **union of both LR and RF** models - if either model classifies a page as financial, it's included. Higher recall, catches more relevant pages.
-
-### ML Classification Flow
+### Multi-Agent Workflow (LangGraph)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                            ML PAGE CLASSIFICATION                            │
+│                     NFRA COMPLIANCE VALIDATION PIPELINE                      │
 └─────────────────────────────────────────────────────────────────────────────┘
 
-    ┌──────────────────┐
-    │  PDF Page Text   │
-    └────────┬─────────┘
-             │
-             ▼
-┌─────────────────────────────────────┐
-│       TEXT PREPROCESSING            │
-│  ┌─────────────────────────────┐    │
-│  │ 1. Convert to Lowercase     │    │
-│  │ 2. Remove Special Characters│    │
-│  │ 3. Normalize Whitespace     │    │
-│  └─────────────────────────────┘    │
-└─────────────────┬───────────────────┘
-                  │
-                  ▼
-┌─────────────────────────────────────┐
-│           ML ENGINE                 │
-│  ┌─────────────────────────────┐    │
-│  │    TF-IDF Vectorizer        │    │
-│  │           ▼                 │    │
-│  │  Single: Logistic Regression│    │
-│  │  Ensemble: LR + Random Forest│   │
-│  └─────────────────────────────┘    │
-└─────────────────┬───────────────────┘
-                  │
-                  ▼
-┌─────────────────────────────────────┐
-│     HEADER KEYWORD MATCHING         │
-│  ┌─────────────────────────────┐    │
-│  │ Filters BS/PL/Cash Flow by  │    │
-│  │ checking page headers       │    │
-│  └─────────────────────────────┘    │
-└─────────────────┬───────────────────┘
-                  │
-                  ▼
-┌─────────────────────────────────────┐
-│        CATEGORY OUTPUT              │
-│                                     │
-│   ┌───────────┐  ┌─────────────┐    │
-│   │ Balance   │  │ Profit &    │    │
-│   │ Sheet     │  │ Loss        │    │
-│   └───────────┘  └─────────────┘    │
-│   ┌───────────┐  ┌─────────────┐    │
-│   │ Cash Flow │  │ Notes       │    │
-│   └───────────┘  └─────────────┘    │
-│   ┌─────────────────────────────┐   │
-│   │ Skip - Not Financial        │   │
-│   └─────────────────────────────┘   │
-└─────────────────────────────────────┘
+    ┌──────────────┐
+    │  PDF Upload  │
+    └──────┬───────┘
+           │
+           ▼
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  GATEKEEPER AGENT                                                            ║
+║  ├─ ML page classification (BS, PL, Cash Flow, Notes)                        ║
+║  ├─ LlamaParse table extraction                                              ║
+║  ├─ LLM-powered JSON structuring                                             ║
+║  └─ Schema validation                                                        ║
+╚══════════════════════════════════╤═══════════════════════════════════════════╝
+                                   │
+                                   ▼
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  QUANT AGENT (No LLM - Pure Python)                                          ║
+║  ├─ Balance Sheet equation: Assets = Equity + Liabilities                    ║
+║  ├─ Cash Flow reconciliation                                                 ║
+║  ├─ Year-over-year variance analysis                                         ║
+║  └─ Financial ratio calculations                                             ║
+╚══════════════════════════════════╤═══════════════════════════════════════════╝
+                                   │
+                                   ▼
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  ACCOUNTANT AGENT                                                            ║
+║  ├─ Knowledge Graph lookup (line item → Ind AS standard)                     ║
+║  ├─ RAG retrieval of relevant accounting rules                               ║
+║  └─ LLM compliance verification with reasoning                               ║
+╚══════════════════════════════════╤═══════════════════════════════════════════╝
+                                   │
+                                   ▼
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  AUDITOR AGENT                                                               ║
+║  ├─ Risk indicator analysis                                                  ║
+║  ├─ Going concern assessment                                                 ║
+║  └─ LLM-powered audit observations                                           ║
+╚══════════════════════════════════╤═══════════════════════════════════════════╝
+                                   │
+                                   ▼
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PUBLISHER AGENT (No LLM - Pure Python)                                      ║
+║  ├─ Aggregate all validation results                                         ║
+║  ├─ Calculate compliance score and grade                                     ║
+║  ├─ Generate professional Markdown report                                    ║
+║  └─ Save to REPORT/ directory                                                ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 ```
 
-### What Keywords Matter?
-
-The ML models learn to recognize patterns:
-
-| If page contains... | Model predicts... |
-|---------------------|-------------------|
-| "assets", "liabilities", "equity", "property" | **Balance Sheet** |
-| "revenue", "expenses", "profit", "cost of goods" | **Profit & Loss** |
-| "cash flows", "operating activities", "financing" | **Cash Flow** |
-| "accounting policies", "disclosure", "valuation" | **Notes** |
-
-### Header Keyword Matching
-
-After ML classification, pages are further validated by checking headers:
-
-| Category | Header must contain |
-|----------|---------------------|
-| BS | "balance sheet", "statement of assets and liabilities" |
-| PL | "income statement", "profit and loss", "statement of profit and loss" |
-| Cash Flow | "cash flow", "statement of cash flow" |
-
-Notes pages are excluded from BS/PL/Cash Flow if header starts with "notes".
-
 ---
 
-## Technical Pipeline: Where Each Tool is Used
+## API Endpoints
 
-### Complete System Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                    COMPLETE PROCESSING PIPELINE                              │
-└─────────────────────────────────────────────────────────────────────────────┘
-
-╔═════════════════════════════════════════════════════════════════════════════╗
-║  STAGE 1: PAGE CLASSIFICATION (PyMuPDF + ML)                                ║
-╠═════════════════════════════════════════════════════════════════════════════╣
-║                                                                             ║
-║   [Load PDF with PyMuPDF]                                                   ║
-║            │                                                                ║
-║            ▼                                                                ║
-║   [Extract raw text from each page]                                         ║
-║            │                                                                ║
-║            ▼                                                                ║
-║   [Preprocess text - lowercase, clean]                                      ║
-║            │                                                                ║
-║            ▼                                                                ║
-║   [TF-IDF Vectorization]                                                    ║
-║            │                                                                ║
-║            ▼                                                                ║
-║   [ML predicts category (LR or LR+RF)]                                      ║
-║            │                                                                ║
-║            ▼                                                                ║
-║   [Group pages by category]                                                 ║
-║                                                                             ║
-╚═══════════════════════════════════╤═════════════════════════════════════════╝
-                                    │
-                                    ▼
-╔═════════════════════════════════════════════════════════════════════════════╗
-║  STAGE 1.5: HEADER KEYWORD MATCHING (Validation)                            ║
-╠═════════════════════════════════════════════════════════════════════════════╣
-║                                                                             ║
-║   [Check page headers for category keywords]                                ║
-║            │                                                                ║
-║            ▼                                                                ║
-║   [Filter out pages without matching headers]                               ║
-║                                                                             ║
-╚═══════════════════════════════════╤═════════════════════════════════════════╝
-                                    │
-                                    ▼
-╔═════════════════════════════════════════════════════════════════════════════╗
-║  STAGE 2: SMART SPLITTING (PyMuPDF)                                         ║
-╠═════════════════════════════════════════════════════════════════════════════╣
-║                                                                             ║
-║   [Create sub-PDF for each category]                                        ║
-║            │                                                                ║
-║            ▼                                                                ║
-║   [Only include relevant pages]  ◄── Reduces 300 pages to 2-25 pages       ║
-║                                                                             ║
-╚═══════════════════════════════════╤═════════════════════════════════════════╝
-                                    │
-                                    ▼
-╔═════════════════════════════════════════════════════════════════════════════╗
-║  STAGE 3: TABLE EXTRACTION (LlamaParse API)                                 ║
-╠═════════════════════════════════════════════════════════════════════════════╣
-║                                                                             ║
-║   [Send category sub-PDF to LlamaParse API]                                 ║
-║            │                                                                ║
-║            ▼                                                                ║
-║   [Extract tables and content as markdown]                                  ║
-║                                                                             ║
-╚═══════════════════════════════════╤═════════════════════════════════════════╝
-                                    │
-                                    ▼
-╔═════════════════════════════════════════════════════════════════════════════╗
-║  OUTPUT FILES                                                               ║
-╠═════════════════════════════════════════════════════════════════════════════╣
-║                                                                             ║
-║   ┌────────────────┐  ┌────────────────┐                                    ║
-║   │ BS_company.md  │  │ PL_company.md  │                                    ║
-║   └────────────────┘  └────────────────┘                                    ║
-║   ┌────────────────────────┐  ┌────────────────────┐                        ║
-║   │ Cash_Flow_company.md   │  │ Notes_company.md   │                        ║
-║   └────────────────────────┘  └────────────────────┘                        ║
-║                                                                             ║
-╚═════════════════════════════════════════════════════════════════════════════╝
-```
-
-### Tool Responsibilities
-
-| Stage | Tool | What It Does |
-|-------|------|--------------|
-| **Stage 1** | **PyMuPDF** | Opens PDF, extracts raw text from each page for ML classification |
-| **Stage 1** | **TF-IDF + ML** | Converts text to features, predicts page category (LR or LR+RF ensemble) |
-| **Stage 1.5** | **Header Matching** | Validates pages by checking headers for category keywords |
-| **Stage 2** | **PyMuPDF** | Creates smaller sub-PDFs containing only relevant category pages |
-| **Stage 3** | **LlamaParse API** | Converts sub-PDF to structured markdown with proper tables |
-
----
-
-## How We Save LlamaParse API Time
-
-### The Optimization Strategy
-
-**Without ML (Naive Approach):**
-- Send entire 300+ page PDF to LlamaParse
-- API processes ALL pages including irrelevant content
-- High API cost and long processing time
-
-**With ML (Our Approach):**
-- ML classifies pages first using PyMuPDF (fast, local, free)
-- Create small sub-PDFs with only relevant pages (e.g., 2-4 pages for Balance Sheet)
-- Send only small sub-PDFs to LlamaParse API
-- **Result: 90%+ reduction in API calls and processing time**
-
-### Example Savings
-
-| Category | Pages in Full PDF | Pages After ML Filter | Reduction |
-|----------|-------------------|----------------------|-----------|
-| Balance Sheet | 300+ | 2 | 99% |
-| Cash Flow | 300+ | 4 | 98% |
-| Notes | 300+ | ~25 | 92% |
-
-**Key Insight:** PyMuPDF handles page classification locally (free, fast), LlamaParse only processes the filtered pages (expensive, accurate).
-
----
-
-## Real Output Samples
-
-### Balance Sheet Output
-
-**File:** `BS_eternal.md`  
-**Source:** eternal.pdf  
-**Pages Identified:** [185, 297]
-
----
-
-# Consolidated Balance Sheet
-## as at March 31, 2025
-
-| Particulars                                        | Note  | As at March 31, 2025 | As at March 31, 2024 |
-| -------------------------------------------------- | ----- | -------------------- | -------------------- |
-| Assets                                             |       |                      |                      |
-| Non-current assets                                 |       |                      |                      |
-| Property, plant and equipment                      | 3     | 965                  | 287                  |
-| Capital work-in-progress                           | 3     | 51                   | 18                   |
-| Right-of-use assets                                | 31    | 1,918                | 690                  |
-| Goodwill                                           | 4     | 5,737                | 4,717                |
-| Other intangible assets                            | 4     | 912                  | 754                  |
-| Investments                                        | 5     | 10,920               | 10,365               |
-| Other financial assets                             | 10    | 2,744                | 747                  |
-| Tax assets (net)                                   | 11    | 129                  | 221                  |
-| Other non-current assets                           | 12    | 546                  | 99                   |
-| **Total non-current assets**                       |       | **23,922**           | **17,898**           |
-| Current assets                                     |       |                      |                      |
-| Inventories                                        | 13    | 176                  | 88                   |
-| Investments                                        | 6     | 2,272                | 1,280                |
-| Trade receivables                                  | 7     | 1,946                | 794                  |
-| Cash and cash equivalents                          | 8     | 666                  | 309                  |
-| Bank balances other than cash and cash equivalents | 9     | 2,948                | 422                  |
-| Other financial assets                             | 10    | 2,769                | 2,324                |
-| Other current assets                               | 12    | 924                  | 241                  |
-| **Total current assets**                           |       | **11,701**           | **5,458**            |
-| **Total assets**                                   |       | **35,623**           | **23,356**           |
-| Equity                                             |       |                      |                      |
-| Equity share capital                               | 14(a) | 907                  | 868                  |
-| Other equity                                       | 14(b) | 29,410               | 19,545               |
-| **Total equity**                                   |       | **30,310**           | **20,406**           |
-
----
-
-### Cash Flow Statement Output
-
-**File:** `Cash_Flow_eternal.md`  
-**Source:** eternal.pdf  
-**Pages Identified:** [193, 194, 305, 306]
-
----
-
-# Consolidated Statement of Cash Flows
-## for the year ended March 31, 2025
-
-| Particulars                                                                           | FY 2025 | FY 2024 |
-| ------------------------------------------------------------------------------------- | ------- | ------- |
-| **A) Cash flows from operating activities**                                           |         |         |
-| Profit / (loss) before tax                                                            | 697     | 291     |
-| Depreciation on property, plant and equipment                                         | 576     | 284     |
-| Amortisation on intangible assets                                                     | 287     | 242     |
-| Provision for doubtful debts and advances                                             | 71      | 68      |
-| Share-based payment expense                                                           | 798     | 515     |
-| Interest income on debentures or bonds                                                | (436)   | (320)   |
-| Interest on lease liabilities                                                         | 147     | 67      |
-| Operating profit before working capital changes                                       | 1,519   | 633     |
-| Trade receivables                                                                     | (1,117) | (348)   |
-| Trade payables                                                                        | 629     | 211     |
-| **Net cash from operating activities (A)**                                            | **308** | **646** |
-| **B) Cash flows from investing activities**                                           |         |         |
-| Purchase of property, plant and equipment                                             | (936)   | (215)   |
-| Proceeds from redemption of mutual fund units                                         | 46,738  | 29,509  |
-| Investment in mutual fund units                                                       | (47,326)| (27,010)|
-| Acquisition of businesses, net of cash acquired                                       | (2,005) | -       |
-| Interest received                                                                     | 819     | 618     |
-| **Net cash from investing activities (B)**                                            | **(7,993)** | **(347)** |
-| **C) Cash flows from financing activities**                                           |         |         |
-| Proceeds from issue of equity shares                                                  | 8,501   | 23      |
-| Payment of lease liabilities                                                          | (258)   | (129)   |
-| **Net cash from financing activities (C)**                                            | **8,042** | **(207)** |
-| **Net increase in cash and cash equivalents (A+B+C)**                                 | **357** | **92**  |
-| Cash and cash equivalents at beginning of the year                                    | 309     | 218     |
-| **Cash and cash equivalents at end of the year**                                      | **666** | **309** |
-
----
-
-## Key Benefits
-
-| Benefit | Description |
-|---------|-------------|
-| **Automated** | No manual page searching required |
-| **Cost Efficient** | ML reduces LlamaParse API usage by 90%+ |
-| **Accurate** | ML trained on financial documents + header validation |
-| **Flexible** | Single model (fast) or ensemble (high recall) modes |
-| **Structured** | Clean markdown tables ready for analysis |
-| **Traceable** | Each file shows source page numbers |
-
----
-
-## Technology Stack
-
-| Component | Purpose |
-|-----------|---------|
-| **Logistic Regression** | Fast, accurate page classification (Single_model.py) |
-| **Random Forest Classifier** | Higher coverage classification (used in ensemble) |
-| **TF-IDF Vectorizer** | Converts text to numerical ML features |
-| **PyMuPDF (fitz)** | PDF text extraction and page splitting (local, fast) |
-| **LlamaParse** | High-quality table extraction to markdown (API) |
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/validate_report` | POST | Full compliance validation pipeline |
+| `/NFRA` | POST | Extract structured JSON from PDF |
+| `/ingest` | POST | Ingest regulatory documents into RAG |
+| `/NFRA-QUERY` | POST | Query Ind AS rules by standard code |
+| `/rag-query` | POST | Semantic search over regulations |
+| `/health` | GET | Health check |
 
 ---
 
@@ -393,30 +135,135 @@ Notes pages are excluded from BS/PL/Cash Flow if header starts with "notes".
 
 ```
 Fin-LLM-NFRA/
-├── Preprocessing/
-│   ├── Single_model.py       # Single LR model processing
-│   ├── category_segmentation.py  # Ensemble (LR+RF) processing
-│   └── utils.py              # Shared utilities
-├── ML_MODELS/
-│   ├── LR_NFRA_vectorizer.pkl    # TF-IDF for LR model
-│   ├── LR_NFRA_CLASSIFIER.pkl    # Logistic Regression model
-│   ├── RF_tfidf_vectorizer.pkl   # TF-IDF for RF model
-│   └── RF_CLASSIFIER.pkl         # Random Forest model
-├── output/                   # Generated markdown files
+├── config/
+│   ├── __init__.py           # Re-exports all settings
+│   ├── settings.py           # Configuration constants
+│   └── logging.py            # Logging configuration
+├── src/
+│   ├── api/
+│   │   ├── server.py         # FastAPI application
+│   │   └── routes/
+│   │       ├── ingest.py     # Document ingestion
+│   │       ├── nfra_query.py # Structured queries
+│   │       └── rag_query.py  # Semantic search
+│   ├── core/
+│   │   ├── state.py          # LangGraph state definition
+│   │   ├── workflow.py       # Agent orchestration
+│   │   └── agents/
+│   │       ├── gatekeeper.py # PDF extraction & validation
+│   │       ├── quant.py      # Mathematical checks
+│   │       ├── accountant.py # Ind AS compliance
+│   │       ├── auditor.py    # Risk assessment
+│   │       └── publisher.py  # Report generation
+│   ├── services/
+│   │   ├── database/         # PostgreSQL + pgvector
+│   │   ├── rag/              # RAG retrieval services
+│   │   └── extraction/llm/   # LLM-based extraction
+│   └── utils/
+│       └── preprocessing.py  # Text utilities
+├── resources/
+│   ├── models/               # ML pickle files
+│   └── prompts/
+│       ├── prompts.py        # LangChain prompt templates
+│       ├── knowledge_graph.json  # Line item → Ind AS mapping
+│       └── *.j2              # Jinja2 extraction templates
+├── REPORT/                   # Generated compliance reports
+├── tests/
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## Environment Variables
+## ML Page Classification
 
-Create a `.env` file in the project root:
+The system uses ML to identify financial statement pages before processing:
 
-```
-LLAMA_CLOUD_API_KEY=your_api_key_here
-```
+| Category | Keywords Detected |
+|----------|-------------------|
+| **Balance Sheet** | assets, liabilities, equity, property |
+| **Profit & Loss** | revenue, expenses, profit, cost of goods |
+| **Cash Flow** | cash flows, operating activities, financing |
+| **Notes** | accounting policies, disclosure, valuation |
 
-Get your API key from [LlamaIndex Cloud](https://cloud.llamaindex.ai/)
+**Optimization:** ML classifies pages locally (free, fast), then only relevant pages are sent to LlamaParse API - **90%+ reduction in API costs**.
 
 ---
+
+## Technology Stack
+
+| Component | Purpose |
+|-----------|---------|
+| **LangGraph** | Multi-agent workflow orchestration |
+| **FastAPI** | Async REST API server |
+| **LangChain + OpenAI** | LLM-powered compliance analysis |
+| **PostgreSQL + pgvector** | Vector database for RAG |
+| **PyMuPDF (fitz)** | PDF text extraction (local, fast) |
+| **LlamaParse** | High-quality table extraction (API) |
+| **Logistic Regression + Random Forest** | ML page classification |
+| **TF-IDF Vectorizer** | Text feature extraction |
+
+---
+
+## Compliance Grading
+
+| Grade | Score Range | Description |
+|-------|-------------|-------------|
+| A | 90-100 | Excellent compliance |
+| B | 80-89 | Good compliance with minor issues |
+| C | 70-79 | Acceptable with improvement needed |
+| D | 60-69 | Below standard, significant issues |
+| F | 0-59 | Non-compliant, major concerns |
+
+---
+
+## Sample Output
+
+### Compliance Report
+
+```markdown
+# NFRA Compliance Validation Report
+
+**Company:** Example Corp Ltd
+**Financial Year:** 2024-25
+**Generated:** 2026-02-14
+
+## Executive Summary
+
+| Metric | Value |
+|--------|-------|
+| **Overall Score** | 85/100 |
+| **Grade** | B |
+| **Critical Issues** | 2 |
+| **Warnings** | 3 |
+
+## ✅ Successful Validations
+
+- Property, Plant & Equipment: Compliant with Ind AS 16
+- Revenue Recognition: Compliant with Ind AS 115
+- Financial Instruments: Compliant with Ind AS 109
+
+## ❌ Critical Issues
+
+- Deferred Tax: FAIL for Ind AS 12
+  - *Reason:* Note reference exists but note text unavailable for verification
+```
+
+---
+
+## Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `OPENAI_API_KEY` | OpenAI API key for LLM | Required |
+| `LLAMA_CLOUD_API_KEY` | LlamaParse API key | Required |
+| `API_HOST` | Server host | `0.0.0.0` |
+| `API_PORT` | Server port | `8000` |
+| `DATABASE_URL` | PostgreSQL connection | Required for RAG |
+| `LOG_LEVEL` | Logging level | `INFO` |
+
+---
+
+## License
+
+MIT License
