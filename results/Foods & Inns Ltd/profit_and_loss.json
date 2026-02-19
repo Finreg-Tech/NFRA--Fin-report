@@ -7,7 +7,7 @@
         "current_year_date": "2025-03-31",
         "previous_year_date": "2024-03-31",
         "currency": "INR",
-        "unit": null
+        "unit": "lakhs"
     },
     "rows": [
         {
@@ -61,7 +61,7 @@
         {
             "section": "expenses",
             "raw_label": "Changes in Inventories of Finished Goods and Work-in-Progress",
-            "normalized_label": "changes_in_inventories",
+            "normalized_label": "changes_in_inventories_of_finished_goods_and_work_in_progress",
             "note_reference": "31",
             "is_subtotal": false,
             "parent_label": null,
@@ -205,7 +205,7 @@
         {
             "section": "other_comprehensive_income",
             "raw_label": "Remeasurement of the defined benefit (asset)",
-            "normalized_label": "remeasurement_of_defined_benefit_asset",
+            "normalized_label": "remeasurement_of_the_defined_benefit_asset",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": null,
@@ -229,7 +229,7 @@
         {
             "section": "other_comprehensive_income",
             "raw_label": "Income tax relating to above items",
-            "normalized_label": "income_tax_relating_to_oci_items",
+            "normalized_label": "income_tax_relating_to_above_items",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": null,

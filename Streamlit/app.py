@@ -152,7 +152,7 @@ def validate_report(uploaded_file) -> Dict[str, Any]:
         response = requests.post(
             f"{API_BASE_URL}/validate_report",
             files=files,
-            timeout=300  # 5 minute timeout for large reports
+            timeout=600  # 10 minute timeout for large PDF processing
         )
         response.raise_for_status()
         json_data = response.json()

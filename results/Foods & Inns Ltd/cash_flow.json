@@ -97,7 +97,7 @@
         {
             "activity_type": "operating",
             "raw_label": "Balances Written off (Net)",
-            "normalized_label": "balances_written_off_net",
+            "normalized_label": "balances_written_off",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": "adjustments",
@@ -133,7 +133,7 @@
         {
             "activity_type": "operating",
             "raw_label": "Mark to Market Loss/(Gain) on Financial Assets",
-            "normalized_label": "mark_to_market_gain_loss",
+            "normalized_label": "mark_to_market_gain",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": "adjustments",
@@ -145,7 +145,7 @@
         {
             "activity_type": "operating",
             "raw_label": "Balance / Provision Write Back (Net)",
-            "normalized_label": "balance_provision_write_back_net",
+            "normalized_label": "balance_provision_write_back",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": "adjustments",
@@ -373,7 +373,7 @@
         {
             "activity_type": "operating",
             "raw_label": "Income Tax paid (Net of Refund)",
-            "normalized_label": "income_tax_paid_net_of_refund",
+            "normalized_label": "income_tax_paid",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": null,
@@ -409,7 +409,7 @@
         {
             "activity_type": "investing",
             "raw_label": "Acquisition of Tangible and Intangible assets",
-            "normalized_label": "acquisition_of_tangible_and_intangible_assets",
+            "normalized_label": "acquisition_of_assets",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": null,
@@ -421,7 +421,7 @@
         {
             "activity_type": "investing",
             "raw_label": "Proceed from disposal of Property, Plant and Equipment",
-            "normalized_label": "proceed_from_disposal_of_ppe",
+            "normalized_label": "proceeds_from_disposal_of_ppe",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": null,
@@ -493,7 +493,7 @@
         {
             "activity_type": "investing",
             "raw_label": "Invested in Fixed Deposits / Margin Money",
-            "normalized_label": "invested_in_fixed_deposits_margin_money",
+            "normalized_label": "invested_in_fixed_deposits",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": null,
@@ -625,7 +625,7 @@
         {
             "activity_type": "financing",
             "raw_label": "Decrease/(Increase) in Current Borrowings (Net)",
-            "normalized_label": "decrease_increase_in_current_borrowings_net",
+            "normalized_label": "decrease_increase_in_current_borrowings",
             "note_reference": null,
             "is_subtotal": false,
             "parent_label": null,
