@@ -1,0 +1,472 @@
+{
+    "statement_type": "cash_flow",
+    "category": "standalone",
+    "rows": [
+        {
+            "activity_type": "operating",
+            "raw_label": "Profit before tax (excluding exceptional items)",
+            "normalized_label": "profit_before_tax_excluding_exceptional_items",
+            "note_reference": null,
+            "values": {
+                "current_year": 13098.98,
+                "previous_year": 10899.98
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Dividend received",
+            "normalized_label": "dividend_received",
+            "note_reference": null,
+            "values": {
+                "current_year": -2977.27,
+                "previous_year": -2655.67
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Depreciation, amortisation, impairment and obsolescence (net)",
+            "normalized_label": "depreciation_amortisation_impairment_obsolescence_net",
+            "note_reference": null,
+            "values": {
+                "current_year": 1963.02,
+                "previous_year": 1753.17
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Exchange difference on items grouped under financing/investing activities",
+            "normalized_label": "exchange_difference_on_items_grouped_under_financing_investing_activities",
+            "note_reference": null,
+            "values": {
+                "current_year": 8.47,
+                "previous_year": -43.23
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Effect of exchange rate changes on cash and cash equivalents",
+            "normalized_label": "effect_of_exchange_rate_changes_on_cash_and_cash_equivalents",
+            "note_reference": null,
+            "values": {
+                "current_year": 7.82,
+                "previous_year": -2.06
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Interest expense",
+            "normalized_label": "interest_expense",
+            "note_reference": null,
+            "values": {
+                "current_year": 2195.46,
+                "previous_year": 2405.83
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Interest income",
+            "normalized_label": "interest_income",
+            "note_reference": null,
+            "values": {
+                "current_year": -1368.61,
+                "previous_year": -1648.2
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "(Profit)/loss on sale of Property, plant and equipment, Investment property and Intangible assets (net)",
+            "normalized_label": "profit_loss_on_sale_of_property_plant_and_equipment_investment_property_and_intangible_assets_net",
+            "note_reference": null,
+            "values": {
+                "current_year": -407.7,
+                "previous_year": -58.68
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "(Profit)/loss on sale of investments (net) (including fair valuation)",
+            "normalized_label": "profit_loss_on_sale_of_investments_net_including_fair_valuation",
+            "note_reference": null,
+            "values": {
+                "current_year": -457.2,
+                "previous_year": -284.78
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Provision on loans given to subsidiary",
+            "normalized_label": "provision_on_loans_given_to_subsidiary",
+            "note_reference": null,
+            "values": {
+                "current_year": null,
+                "previous_year": -70.24
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Employee stock option-discount forming part of employee benefits expense",
+            "normalized_label": "employee_stock_option_discount_forming_part_of_employee_benefits_expense",
+            "note_reference": null,
+            "values": {
+                "current_year": 83.83,
+                "previous_year": 91.56
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Other adjustments",
+            "normalized_label": "other_adjustments",
+            "note_reference": null,
+            "values": {
+                "current_year": 16.09,
+                "previous_year": 0.42
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Operating profit before working capital changes",
+            "normalized_label": "operating_profit_before_working_capital_changes",
+            "note_reference": null,
+            "values": {
+                "current_year": 12162.89,
+                "previous_year": 10388.1
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "(Increase)/decrease in trade and other receivables",
+            "normalized_label": "increase_decrease_in_trade_and_other_receivables",
+            "note_reference": null,
+            "values": {
+                "current_year": -672.0,
+                "previous_year": -5401.41
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "(Increase)/decrease in inventories",
+            "normalized_label": "increase_decrease_in_inventories",
+            "note_reference": null,
+            "values": {
+                "current_year": 132.99,
+                "previous_year": -74.95
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Increase/(decrease) in trade payables and customer advances",
+            "normalized_label": "increase_decrease_in_trade_payables_and_customer_advances",
+            "note_reference": null,
+            "values": {
+                "current_year": 3495.43,
+                "previous_year": 6030.91
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Cash (used in)/generated from operations",
+            "normalized_label": "cash_used_in_generated_from_operations",
+            "note_reference": null,
+            "values": {
+                "current_year": 15119.31,
+                "previous_year": 10942.65
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Direct taxes (paid) [net]",
+            "normalized_label": "direct_taxes_paid_net",
+            "note_reference": null,
+            "values": {
+                "current_year": -2395.33,
+                "previous_year": -2645.18
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Purchase of Property, plant and equipment, Investment property and Intangible assets",
+            "normalized_label": "purchase_of_property_plant_and_equipment_investment_property_and_intangible_assets",
+            "note_reference": null,
+            "values": {
+                "current_year": -2725.01,
+                "previous_year": -2920.14
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Sale of Property, plant and equipment, Investment property and Intangible assets",
+            "normalized_label": "sale_of_property_plant_and_equipment_investment_property_and_intangible_assets",
+            "note_reference": null,
+            "values": {
+                "current_year": 685.17,
+                "previous_year": 94.59
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Investment in subsidiaries, associates and joint venture companies",
+            "normalized_label": "investment_in_subsidiaries_associates_and_joint_venture_companies",
+            "note_reference": null,
+            "values": {
+                "current_year": -2215.31,
+                "previous_year": -3719.66
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Divestment of stake in subsidiary companies, associates and joint venture companies (net)",
+            "normalized_label": "divestment_of_stake_in_subsidiary_companies_associates_and_joint_venture_companies_net",
+            "note_reference": null,
+            "values": {
+                "current_year": 1065.37,
+                "previous_year": 186.67
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Sale of non-current investments",
+            "normalized_label": "sale_of_non_current_investments",
+            "note_reference": null,
+            "values": {
+                "current_year": null,
+                "previous_year": 34.23
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "(Purchase)/sale of current investments (net)",
+            "normalized_label": "purchase_sale_of_current_investments_net",
+            "note_reference": null,
+            "values": {
+                "current_year": -7306.59,
+                "previous_year": 4757.26
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Change in other bank balances and cash not available for immediate use",
+            "normalized_label": "change_in_other_bank_balances_and_cash_not_available_for_immediate_use",
+            "note_reference": null,
+            "values": {
+                "current_year": 148.11,
+                "previous_year": -146.31
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Long term deposits/Loans (given) - subsidiaries, associates, joint venture companies and third parties",
+            "normalized_label": "long_term_deposits_loans_given_subsidiaries_associates_joint_venture_companies_and_third_parties",
+            "note_reference": null,
+            "values": {
+                "current_year": -111.48,
+                "previous_year": -110.21
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Long term deposits/loans repaid - subsidiaries, associates, joint venture companies and third parties",
+            "normalized_label": "long_term_deposits_loans_repaid_subsidiaries_associates_joint_venture_companies_and_third_parties",
+            "note_reference": null,
+            "values": {
+                "current_year": 4.51,
+                "previous_year": 2499.27
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Short term deposits/loans (given)/repaid (net) - subsidiaries, associates, joint venture companies and third parties",
+            "normalized_label": "short_term_deposits_loans_given_repaid_net_subsidiaries_associates_joint_venture_companies_and_third_parties",
+            "note_reference": null,
+            "values": {
+                "current_year": -134.46,
+                "previous_year": 192.71
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Net proceeds from transfer of business undertaking",
+            "normalized_label": "net_proceeds_from_transfer_of_business_undertaking",
+            "note_reference": null,
+            "values": {
+                "current_year": null,
+                "previous_year": 800.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Interest received",
+            "normalized_label": "interest_received",
+            "note_reference": null,
+            "values": {
+                "current_year": 1260.14,
+                "previous_year": 2034.17
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Dividend received from subsidiaries and joint venture companies",
+            "normalized_label": "dividend_received_from_subsidiaries_and_joint_venture_companies",
+            "note_reference": null,
+            "values": {
+                "current_year": 2957.73,
+                "previous_year": 2649.3
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Dividend received from other investments",
+            "normalized_label": "dividend_received_from_other_investments",
+            "note_reference": null,
+            "values": {
+                "current_year": 19.54,
+                "previous_year": 6.37
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Proceeds from fresh issue of share capital (including share application money)[net]",
+            "normalized_label": "proceeds_from_fresh_issue_of_share_capital_including_share_application_money_net",
+            "note_reference": null,
+            "values": {
+                "current_year": 9.32,
+                "previous_year": 9.65
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Proceeds from non-current borrowings",
+            "normalized_label": "proceeds_from_non_current_borrowings",
+            "note_reference": null,
+            "values": {
+                "current_year": 5500.0,
+                "previous_year": 7450.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Repayment of non-current borrowings",
+            "normalized_label": "repayment_of_non_current_borrowings",
+            "note_reference": null,
+            "values": {
+                "current_year": -4950.0,
+                "previous_year": -4845.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "(Repayments)/proceeds from other borrowings (net)",
+            "normalized_label": "repayments_proceeds_from_other_borrowings_net",
+            "note_reference": null,
+            "values": {
+                "current_year": -1120.48,
+                "previous_year": 1676.96
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Settlement of derivative contracts related to borrowings",
+            "normalized_label": "settlement_of_derivative_contracts_related_to_borrowings",
+            "note_reference": null,
+            "values": {
+                "current_year": 50.24,
+                "previous_year": 49.65
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Interest paid on Lease Liability",
+            "normalized_label": "interest_paid_on_lease_liability",
+            "note_reference": null,
+            "values": {
+                "current_year": -23.3,
+                "previous_year": -17.56
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Principal repayment on Lease Liability",
+            "normalized_label": "principal_repayment_on_lease_liability",
+            "note_reference": null,
+            "values": {
+                "current_year": -136.03,
+                "previous_year": -98.7
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Dividends paid",
+            "normalized_label": "dividends_paid",
+            "note_reference": null,
+            "values": {
+                "current_year": -3849.57,
+                "previous_year": -4216.95
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Buy-back of equity shares",
+            "normalized_label": "buy_back_of_equity_shares",
+            "note_reference": null,
+            "values": {
+                "current_year": null,
+                "previous_year": -10000.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Tax on buy-back of equity shares",
+            "normalized_label": "tax_on_buy_back_of_equity_shares",
+            "note_reference": null,
+            "values": {
+                "current_year": null,
+                "previous_year": -2253.33
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Expenses for buy-back of equity shares (net of tax)",
+            "normalized_label": "expenses_for_buy_back_of_equity_shares_net_of_tax",
+            "note_reference": null,
+            "values": {
+                "current_year": null,
+                "previous_year": -26.55
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Interest paid (including cash flows from interest rate swaps)",
+            "normalized_label": "interest_paid_including_cash_flows_from_interest_rate_swaps",
+            "note_reference": null,
+            "values": {
+                "current_year": -2205.34,
+                "previous_year": -2250.23
+            }
+        }
+    ],
+    "totals": {
+        "net_cash_from_operating": {
+            "current_year": 12723.98,
+            "previous_year": 8297.47
+        },
+        "net_cash_from_investing": {
+            "current_year": -6352.28,
+            "previous_year": 6358.25
+        },
+        "net_cash_from_financing": {
+            "current_year": -6725.16,
+            "previous_year": -14522.06
+        },
+        "net_increase_in_cash": {
+            "current_year": -353.46,
+            "previous_year": 133.66
+        },
+        "opening_cash_balance": {
+            "current_year": 3940.99,
+            "previous_year": 3803.99
+        },
+        "closing_cash_balance": {
+            "current_year": 3583.55,
+            "previous_year": 3940.99
+        }
+    }
+}

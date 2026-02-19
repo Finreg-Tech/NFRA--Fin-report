@@ -1,0 +1,512 @@
+{
+    "statement_type": "cash_flow",
+    "category": "standalone",
+    "rows": [
+        {
+            "activity_type": "operating",
+            "raw_label": "Profit before tax",
+            "normalized_label": "profit_before_tax",
+            "note_reference": null,
+            "values": {
+                "current_year": 15283.69,
+                "previous_year": 19580.67
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Depreciation and Amortisation Expense",
+            "normalized_label": "depreciation_and_amortisation_expense",
+            "note_reference": null,
+            "values": {
+                "current_year": 3878.56,
+                "previous_year": 3771.96
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Unrealised Foreign Exchange Fluctuation (gain) (net)",
+            "normalized_label": "unrealised_foreign_exchange_fluctuation_gain_net",
+            "note_reference": null,
+            "values": {
+                "current_year": -124.92,
+                "previous_year": -9.79
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Gain on sale of Investment in subsidiaries",
+            "normalized_label": "gain_on_sale_of_investment_in_subsidiaries",
+            "note_reference": null,
+            "values": {
+                "current_year": null,
+                "previous_year": -143.5
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Income from Mutual Funds",
+            "normalized_label": "income_from_mutual_funds",
+            "note_reference": null,
+            "values": {
+                "current_year": -74.54,
+                "previous_year": -35.2
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Loss on Sale / retirement / write off of Property, Plant and Equipment (including Capital Work-in-Progress) (net)",
+            "normalized_label": "loss_on_sale_retirement_write_off_of_property_plant_and_equipment_net",
+            "note_reference": null,
+            "values": {
+                "current_year": 112.87,
+                "previous_year": 41.44
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Amortised Government Grant Income",
+            "normalized_label": "amortised_government_grant_income",
+            "note_reference": null,
+            "values": {
+                "current_year": -400.31,
+                "previous_year": -391.67
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Liabilities no longer required written back",
+            "normalized_label": "liabilities_no_longer_required_written_back",
+            "note_reference": null,
+            "values": {
+                "current_year": -160.83,
+                "previous_year": -91.5
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Finance Costs",
+            "normalized_label": "finance_costs",
+            "note_reference": null,
+            "values": {
+                "current_year": 3207.39,
+                "previous_year": 3404.4
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Interest income",
+            "normalized_label": "interest_income",
+            "note_reference": null,
+            "values": {
+                "current_year": -1655.72,
+                "previous_year": -9086.91
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Financial Guarantee Commission (amortised)",
+            "normalized_label": "financial_guarantee_commission_amortised",
+            "note_reference": null,
+            "values": {
+                "current_year": -1.23,
+                "previous_year": -13.63
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "(Reversal of provision) / Provision for Stores and Spares",
+            "normalized_label": "reversal_of_provision_provision_for_stores_and_spares",
+            "note_reference": null,
+            "values": {
+                "current_year": -21.78,
+                "previous_year": 2.61
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Bad debts / sundry balance written off",
+            "normalized_label": "bad_debts_sundry_balance_written_off",
+            "note_reference": null,
+            "values": {
+                "current_year": 43.54,
+                "previous_year": 7.53
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Provision for Advances to suppliers / unrealised balances provided for",
+            "normalized_label": "provision_for_advances_to_suppliers_unrealised_balances_provided_for",
+            "note_reference": null,
+            "values": {
+                "current_year": 17.73,
+                "previous_year": 164.53
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Decrease / (Increase) in Inventories",
+            "normalized_label": "decrease_increase_in_inventories",
+            "note_reference": null,
+            "values": {
+                "current_year": 1184.99,
+                "previous_year": -1023.75
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "(Increase) in Trade Receivables",
+            "normalized_label": "increase_in_trade_receivables",
+            "note_reference": null,
+            "values": {
+                "current_year": -616.23,
+                "previous_year": -1560.77
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "(Increase) in Other Financial Assets",
+            "normalized_label": "increase_in_other_financial_assets",
+            "note_reference": null,
+            "values": {
+                "current_year": -230.97,
+                "previous_year": -156.29
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Decrease in Other Assets",
+            "normalized_label": "decrease_in_other_assets",
+            "note_reference": null,
+            "values": {
+                "current_year": 101.89,
+                "previous_year": 68.3
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "(Decrease) / Increase in Trade Payables",
+            "normalized_label": "decrease_increase_in_trade_payables",
+            "note_reference": null,
+            "values": {
+                "current_year": -1408.74,
+                "previous_year": 661.27
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Increase / (Decrease) in Other Financial Liabilities",
+            "normalized_label": "increase_decrease_in_other_financial_liabilities",
+            "note_reference": null,
+            "values": {
+                "current_year": 153.94,
+                "previous_year": -603.5
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "(Decrease) in Other Liabilities and Provisions",
+            "normalized_label": "decrease_in_other_liabilities_and_provisions",
+            "note_reference": null,
+            "values": {
+                "current_year": -831.35,
+                "previous_year": -1559.22
+            }
+        },
+        {
+            "activity_type": "operating",
+            "raw_label": "Less : Income tax (Paid) / Tax deducted at sources (Net of refund)",
+            "normalized_label": "income_tax_paid_tax_deducted_at_sources_net_of_refund",
+            "note_reference": null,
+            "values": {
+                "current_year": -4.75,
+                "previous_year": -51.2
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Payment towards acquisition of Property, Plant and Equipment, including capital advances, capital work-in-progress and intangible assets",
+            "normalized_label": "payment_towards_acquisition_of_property_plant_and_equipment",
+            "note_reference": null,
+            "values": {
+                "current_year": -6612.96,
+                "previous_year": -1649.97
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from Sale of Property, Plant and Equipment",
+            "normalized_label": "proceeds_from_sale_of_property_plant_and_equipment",
+            "note_reference": null,
+            "values": {
+                "current_year": 1.71,
+                "previous_year": 0.64
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "(Payment towards) / Proceeds from Current investments (net)",
+            "normalized_label": "payment_towards_proceeds_from_current_investments_net",
+            "note_reference": null,
+            "values": {
+                "current_year": -544.92,
+                "previous_year": 273.24
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "(Payment towards) acquisition of subsidiaries",
+            "normalized_label": "payment_towards_acquisition_of_subsidiaries",
+            "note_reference": null,
+            "values": {
+                "current_year": -240.71,
+                "previous_year": null
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "(Payment towards) acquisition of business",
+            "normalized_label": "payment_towards_acquisition_of_business",
+            "note_reference": null,
+            "values": {
+                "current_year": -815.0,
+                "previous_year": -2.58
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "(Payment towards) Non-current investments",
+            "normalized_label": "payment_towards_non_current_investments",
+            "note_reference": null,
+            "values": {
+                "current_year": -59.5,
+                "previous_year": -10.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from Sale of Non-current investments",
+            "normalized_label": "proceeds_from_sale_of_non_current_investments",
+            "note_reference": null,
+            "values": {
+                "current_year": null,
+                "previous_year": 10.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "(Payment towards) equity investment in subsidiaries",
+            "normalized_label": "payment_towards_equity_investment_in_subsidiaries",
+            "note_reference": null,
+            "values": {
+                "current_year": -393.07,
+                "previous_year": -800.0
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "(Payment towards) Non-current investment in Optionally Convertible Debenture of subsidiaries",
+            "normalized_label": "payment_towards_non_current_investment_in_optionally_convertible_debenture_of_subsidiaries",
+            "note_reference": null,
+            "values": {
+                "current_year": -259.25,
+                "previous_year": -45.1
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "(Payment towards) Non-current investment in Unsecured Perpetual Securities of subsidiaries",
+            "normalized_label": "payment_towards_non_current_investment_in_unsecured_perpetual_securities_of_subsidiaries",
+            "note_reference": null,
+            "values": {
+                "current_year": -711.0,
+                "previous_year": null
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from redemption of Optionally Convertible Debentures of subsidiary",
+            "normalized_label": "proceeds_from_redemption_of_optionally_convertible_debentures_of_subsidiary",
+            "note_reference": "34 (vii)",
+            "values": {
+                "current_year": null,
+                "previous_year": 202.88
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from disposal of subsidiaries",
+            "normalized_label": "proceeds_from_disposal_of_subsidiaries",
+            "note_reference": "34 (vii)",
+            "values": {
+                "current_year": null,
+                "previous_year": 536.22
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Fixed / Margin Money Deposits withdrawn / (placed) (net)",
+            "normalized_label": "fixed_margin_money_deposits_withdrawn_placed_net",
+            "note_reference": null,
+            "values": {
+                "current_year": 975.93,
+                "previous_year": -3590.03
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Non-current Loans given to subsidiaries",
+            "normalized_label": "non_current_loans_given_to_subsidiaries",
+            "note_reference": null,
+            "values": {
+                "current_year": -8996.78,
+                "previous_year": -1449.85
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Proceeds from Non-current Loans received back from subsidiaries",
+            "normalized_label": "proceeds_from_non_current_loans_received_back_from_subsidiaries",
+            "note_reference": null,
+            "values": {
+                "current_year": 5922.54,
+                "previous_year": 845.07
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Current Loans given to related parties (net)",
+            "normalized_label": "current_loans_given_to_related_parties_net",
+            "note_reference": null,
+            "values": {
+                "current_year": -24.44,
+                "previous_year": -475.53
+            }
+        },
+        {
+            "activity_type": "investing",
+            "raw_label": "Interest received (including carrying cost and late payment surcharge from customers)",
+            "normalized_label": "interest_received_including_carrying_cost_and_late_payment_surcharge_from_customers",
+            "note_reference": null,
+            "values": {
+                "current_year": 946.84,
+                "previous_year": 9299.05
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "(Payment towards) principal portion of lease liabilities",
+            "normalized_label": "payment_towards_principal_portion_of_lease_liabilities",
+            "note_reference": null,
+            "values": {
+                "current_year": -26.14,
+                "previous_year": -0.47
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Proceeds from called Non-cumulative Compulsory Redeemable Preference shares",
+            "normalized_label": "proceeds_from_called_non_cumulative_compulsory_redeemable_preference_shares",
+            "note_reference": null,
+            "values": {
+                "current_year": 200.0,
+                "previous_year": null
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "(Repayment) of Non-cumulative Compulsory Redeemable Preference shares",
+            "normalized_label": "repayment_of_non_cumulative_compulsory_redeemable_preference_shares",
+            "note_reference": null,
+            "values": {
+                "current_year": -500.0,
+                "previous_year": null
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Proceeds from Non-current borrowings",
+            "normalized_label": "proceeds_from_non_current_borrowings",
+            "note_reference": null,
+            "values": {
+                "current_year": 851.96,
+                "previous_year": 22538.15
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "(Repayment) of Non-current borrowings",
+            "normalized_label": "repayment_of_non_current_borrowings",
+            "note_reference": null,
+            "values": {
+                "current_year": -2604.21,
+                "previous_year": -29214.49
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Proceeds of Current borrowings (net)",
+            "normalized_label": "proceeds_of_current_borrowings_net",
+            "note_reference": null,
+            "values": {
+                "current_year": 2402.43,
+                "previous_year": 1845.19
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "(Repayment) towards redemption of Unsecured Perpetual Securities",
+            "normalized_label": "repayment_towards_redemption_of_unsecured_perpetual_securities",
+            "note_reference": null,
+            "values": {
+                "current_year": -4258.08,
+                "previous_year": -5900.0
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "(Distribution) to holders of Unsecured Perpetual Securities",
+            "normalized_label": "distribution_to_holders_of_unsecured_perpetual_securities",
+            "note_reference": null,
+            "values": {
+                "current_year": -840.07,
+                "previous_year": -1631.93
+            }
+        },
+        {
+            "activity_type": "financing",
+            "raw_label": "Finance Costs Paid (Including interest on lease liabilities)",
+            "normalized_label": "finance_costs_paid_including_interest_on_lease_liabilities",
+            "note_reference": null,
+            "values": {
+                "current_year": -3266.97,
+                "previous_year": -3387.89
+            }
+        }
+    ],
+    "totals": {
+        "net_cash_from_operating": {
+            "current_year": 18453.23,
+            "previous_year": 12975.78
+        },
+        "net_cash_from_investing": {
+            "current_year": -10810.61,
+            "previous_year": 3144.04
+        },
+        "net_cash_from_financing": {
+            "current_year": -8041.08,
+            "previous_year": -15751.44
+        },
+        "net_increase_in_cash": {
+            "current_year": -398.46,
+            "previous_year": 368.38
+        },
+        "opening_cash_balance": {
+            "current_year": 567.82,
+            "previous_year": 198.02
+        },
+        "closing_cash_balance": {
+            "current_year": 169.36,
+            "previous_year": 567.82
+        }
+    }
+}

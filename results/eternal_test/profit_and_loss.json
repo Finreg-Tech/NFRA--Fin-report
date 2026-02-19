@@ -1,0 +1,193 @@
+{
+    "statement_type": "profit_and_loss",
+    "category": "consolidated",
+    "metadata": {
+        "statement_title": "Consolidated Statement of Profit and Loss",
+        "period": "for the year ended March 31, 2025",
+        "reporting_dates": [
+            "2025-03-31",
+            "2024-03-31"
+        ]
+    },
+    "rows": [
+        {
+            "section": "income",
+            "raw_label": "Revenue from operations",
+            "normalized_label": "revenue_from_operations",
+            "note_reference": "19",
+            "values": {
+                "2025-03-31": 20243.0,
+                "2024-03-31": 12114.0
+            }
+        },
+        {
+            "section": "income",
+            "raw_label": "Other income",
+            "normalized_label": "other_income",
+            "note_reference": "20",
+            "values": {
+                "2025-03-31": 1077.0,
+                "2024-03-31": 847.0
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Purchases of stock-in-trade",
+            "normalized_label": "purchases_of_stock_in_trade",
+            "note_reference": "21",
+            "values": {
+                "2025-03-31": 5653.0,
+                "2024-03-31": 2887.0
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Changes in inventories of stock-in-trade",
+            "normalized_label": "changes_in_inventories_of_stock_in_trade",
+            "note_reference": "22",
+            "values": {
+                "2025-03-31": -88.0,
+                "2024-03-31": -5.0
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Employee benefits expense",
+            "normalized_label": "employee_benefits_expense",
+            "note_reference": "23",
+            "values": {
+                "2025-03-31": 2558.0,
+                "2024-03-31": 1659.0
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Finance costs",
+            "normalized_label": "finance_costs",
+            "note_reference": "24",
+            "values": {
+                "2025-03-31": 154.0,
+                "2024-03-31": 72.0
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Depreciation and amortisation expenses",
+            "normalized_label": "depreciation_and_amortisation_expenses",
+            "note_reference": "25",
+            "values": {
+                "2025-03-31": 863.0,
+                "2024-03-31": 526.0
+            }
+        },
+        {
+            "section": "expenses",
+            "raw_label": "Other expenses",
+            "normalized_label": "other_expenses",
+            "note_reference": "26",
+            "values": {
+                "2025-03-31": 11483.0,
+                "2024-03-31": 7531.0
+            }
+        },
+        {
+            "section": "tax",
+            "raw_label": "Current tax",
+            "normalized_label": "current_tax",
+            "note_reference": "",
+            "values": {
+                "2025-03-31": 231.0,
+                "2024-03-31": 1.0
+            }
+        },
+        {
+            "section": "tax",
+            "raw_label": "Deferred tax",
+            "normalized_label": "deferred_tax",
+            "note_reference": "",
+            "values": {
+                "2025-03-31": -61.0,
+                "2024-03-31": -61.0
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Remeasurements of the defined benefit plans",
+            "normalized_label": "remeasurements_of_the_defined_benefit_plans",
+            "note_reference": "",
+            "values": {
+                "2025-03-31": -10.0,
+                "2024-03-31": 3.0
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Equity instruments through other comprehensive income",
+            "normalized_label": "equity_instruments_through_other_comprehensive_income",
+            "note_reference": "",
+            "values": {
+                "2025-03-31": 77.0,
+                "2024-03-31": 60.0
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Income tax relating to above",
+            "normalized_label": "income_tax_relating_to_above",
+            "note_reference": "34",
+            "values": {
+                "2025-03-31": -30.0,
+                "2024-03-31": null
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Exchange differences on translation of foreign operations",
+            "normalized_label": "exchange_differences_on_translation_of_foreign_operations",
+            "note_reference": "",
+            "values": {
+                "2025-03-31": 2.0,
+                "2024-03-31": 0.0
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Debt instruments through other comprehensive income",
+            "normalized_label": "debt_instruments_through_other_comprehensive_income",
+            "note_reference": "",
+            "values": {
+                "2025-03-31": 112.0,
+                "2024-03-31": -8.0
+            }
+        },
+        {
+            "section": "other_comprehensive_income",
+            "raw_label": "Income tax relating to above",
+            "normalized_label": "income_tax_relating_to_above",
+            "note_reference": "34",
+            "values": {
+                "2025-03-31": -23.0,
+                "2024-03-31": null
+            }
+        }
+    ],
+    "totals": {
+        "total_income": {
+            "2025-03-31": 21320.0,
+            "2024-03-31": 12961.0
+        },
+        "total_expenses": {
+            "2025-03-31": 20623.0,
+            "2024-03-31": 12670.0
+        },
+        "profit_before_tax": {
+            "2025-03-31": 697.0,
+            "2024-03-31": 291.0
+        },
+        "profit_after_tax": {
+            "2025-03-31": 527.0,
+            "2024-03-31": 351.0
+        },
+        "basic_eps": null
+    }
+}

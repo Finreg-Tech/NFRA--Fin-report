@@ -1,0 +1,457 @@
+{
+    "statement_type": "balance_sheet",
+    "category": "standalone",
+    "metadata": {
+        "statement_title": "Standalone Balance Sheet",
+        "period": "as at March 31, 2025"
+    },
+    "rows": [
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Property, plant and equipment",
+            "normalized_label": "property_plant_and_equipment",
+            "note_reference": "2",
+            "values": {
+                "current_year": 9155.12,
+                "previous_year": 9207.41
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Capital work-in-progress",
+            "normalized_label": "capital_work_in_progress",
+            "note_reference": "2",
+            "values": {
+                "current_year": 1117.33,
+                "previous_year": 1397.04
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Investment property",
+            "normalized_label": "investment_property",
+            "note_reference": "3",
+            "values": {
+                "current_year": 741.34,
+                "previous_year": 567.93
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Investment Property under construction",
+            "normalized_label": "investment_property_under_construction",
+            "note_reference": "3",
+            "values": {
+                "current_year": 565.82,
+                "previous_year": 593.33
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Goodwill",
+            "normalized_label": "goodwill",
+            "note_reference": "4",
+            "values": {
+                "current_year": 121.86,
+                "previous_year": 121.86
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Other Intangible assets",
+            "normalized_label": "other_intangible_assets",
+            "note_reference": "4",
+            "values": {
+                "current_year": 107.95,
+                "previous_year": 152.42
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Intangible assets under development",
+            "normalized_label": "intangible_assets_under_development",
+            "note_reference": "4",
+            "values": {
+                "current_year": 21.76,
+                "previous_year": 26.63
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Right-of-use assets",
+            "normalized_label": "right_of_use_assets",
+            "note_reference": "54(b)",
+            "values": {
+                "current_year": 561.89,
+                "previous_year": 475.61
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Investments",
+            "normalized_label": "investments",
+            "note_reference": "5",
+            "values": {
+                "current_year": 32853.88,
+                "previous_year": 30649.26
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Loans",
+            "normalized_label": "loans",
+            "note_reference": "6",
+            "values": {
+                "current_year": 726.67,
+                "previous_year": 579.06
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Other financial assets",
+            "normalized_label": "other_financial_assets",
+            "note_reference": "7",
+            "values": {
+                "current_year": 976.02,
+                "previous_year": 596.84
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Deferred tax assets (net)",
+            "normalized_label": "deferred_tax_assets_net",
+            "note_reference": "44(d)",
+            "values": {
+                "current_year": 1544.69,
+                "previous_year": 1594.48
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Current tax assets (net)",
+            "normalized_label": "current_tax_assets_net",
+            "note_reference": "",
+            "values": {
+                "current_year": 3511.16,
+                "previous_year": 3264.38
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Other non-current assets",
+            "normalized_label": "other_non_current_assets",
+            "note_reference": "8",
+            "values": {
+                "current_year": 1838.3,
+                "previous_year": 1417.84
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Inventories",
+            "normalized_label": "inventories",
+            "note_reference": "9",
+            "values": {
+                "current_year": 3398.77,
+                "previous_year": 3520.97
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Investments",
+            "normalized_label": "investments",
+            "note_reference": "10",
+            "values": {
+                "current_year": 24788.29,
+                "previous_year": 16813.34
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Trade receivables",
+            "normalized_label": "trade_receivables",
+            "note_reference": "11",
+            "values": {
+                "current_year": 38330.18,
+                "previous_year": 36960.51
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Cash and cash equivalents",
+            "normalized_label": "cash_and_cash_equivalents",
+            "note_reference": "12",
+            "values": {
+                "current_year": 3583.55,
+                "previous_year": 3940.99
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Other bank balances",
+            "normalized_label": "other_bank_balances",
+            "note_reference": "13",
+            "values": {
+                "current_year": 763.06,
+                "previous_year": 829.98
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Loans",
+            "normalized_label": "loans",
+            "note_reference": "14",
+            "values": {
+                "current_year": 635.02,
+                "previous_year": 63.04
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Other financial assets",
+            "normalized_label": "other_financial_assets",
+            "note_reference": "15",
+            "values": {
+                "current_year": 3775.12,
+                "previous_year": 4259.79
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Other current assets",
+            "normalized_label": "other_current_assets",
+            "note_reference": "16",
+            "values": {
+                "current_year": 57141.13,
+                "previous_year": 57553.44
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Group(s) of assets classified as held for sale",
+            "normalized_label": "groups_of_assets_classified_as_held_for_sale",
+            "note_reference": "39",
+            "values": {
+                "current_year": 157.44,
+                "previous_year": 1177.91
+            }
+        },
+        {
+            "section": "equity",
+            "classification": null,
+            "raw_label": "Equity share capital",
+            "normalized_label": "equity_share_capital",
+            "note_reference": "17",
+            "values": {
+                "current_year": 275.04,
+                "previous_year": 274.93
+            }
+        },
+        {
+            "section": "equity",
+            "classification": null,
+            "raw_label": "Other equity",
+            "normalized_label": "other_equity",
+            "note_reference": "18",
+            "values": {
+                "current_year": 71620.8,
+                "previous_year": 64241.17
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "non_current",
+            "raw_label": "Borrowings",
+            "normalized_label": "borrowings",
+            "note_reference": "19",
+            "values": {
+                "current_year": 9286.0,
+                "previous_year": 11931.14
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "non_current",
+            "raw_label": "Lease liabilities",
+            "normalized_label": "lease_liabilities",
+            "note_reference": "",
+            "values": {
+                "current_year": 198.19,
+                "previous_year": 112.25
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "non_current",
+            "raw_label": "Other financial liabilities",
+            "normalized_label": "other_financial_liabilities",
+            "note_reference": "20",
+            "values": {
+                "current_year": 143.07,
+                "previous_year": 75.81
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "non_current",
+            "raw_label": "Provisions",
+            "normalized_label": "provisions",
+            "note_reference": "21",
+            "values": {
+                "current_year": 765.72,
+                "previous_year": 703.43
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "non_current",
+            "raw_label": "Other non-current liabilities",
+            "normalized_label": "other_non_current_liabilities",
+            "note_reference": "22",
+            "values": {
+                "current_year": 18.47,
+                "previous_year": 22.67
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "current",
+            "raw_label": "Borrowings",
+            "normalized_label": "borrowings",
+            "note_reference": "23",
+            "values": {
+                "current_year": 3743.58,
+                "previous_year": 4864.65
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "current",
+            "raw_label": "Current maturities of long-term borrowings",
+            "normalized_label": "current_maturities_of_long_term_borrowings",
+            "note_reference": "24",
+            "values": {
+                "current_year": 8905.3,
+                "previous_year": 5744.68
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "current",
+            "raw_label": "Lease liabilities",
+            "normalized_label": "lease_liabilities",
+            "note_reference": "",
+            "values": {
+                "current_year": 162.18,
+                "previous_year": 158.89
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "current",
+            "raw_label": "Due to micro enterprises and small enterprises",
+            "normalized_label": "due_to_micro_enterprises_and_small_enterprises",
+            "note_reference": "",
+            "values": {
+                "current_year": 1170.16,
+                "previous_year": 873.17
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "current",
+            "raw_label": "Due to others",
+            "normalized_label": "due_to_others",
+            "note_reference": "",
+            "values": {
+                "current_year": 37625.83,
+                "previous_year": 39868.09
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "current",
+            "raw_label": "Other financial liabilities",
+            "normalized_label": "other_financial_liabilities",
+            "note_reference": "26",
+            "values": {
+                "current_year": 3450.2,
+                "previous_year": 4097.83
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "current",
+            "raw_label": "Other current liabilities",
+            "normalized_label": "other_current_liabilities",
+            "note_reference": "27",
+            "values": {
+                "current_year": 44764.13,
+                "previous_year": 39287.68
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "current",
+            "raw_label": "Provisions",
+            "normalized_label": "provisions",
+            "note_reference": "28",
+            "values": {
+                "current_year": 2398.23,
+                "previous_year": 2202.05
+            }
+        },
+        {
+            "section": "liabilities",
+            "classification": "current",
+            "raw_label": "Current tax liabilities (net)",
+            "normalized_label": "current_tax_liabilities_net",
+            "note_reference": "",
+            "values": {
+                "current_year": 1889.45,
+                "previous_year": 1305.62
+            }
+        }
+    ],
+    "totals": {
+        "total_assets": {
+            "current_year": 186416.35,
+            "previous_year": 175764.06
+        },
+        "total_equity": {
+            "current_year": 71895.84,
+            "previous_year": 64516.1
+        },
+        "total_liabilities": {
+            "current_year": 114520.51,
+            "previous_year": 111247.96
+        },
+        "total_equity_and_liabilities": {
+            "current_year": 186416.35,
+            "previous_year": 175764.06
+        }
+    }
+}

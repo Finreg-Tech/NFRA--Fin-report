@@ -1,0 +1,241 @@
+{
+    "statement_type": "balance_sheet",
+    "category": "consolidated",
+    "metadata": {
+        "statement_title": "Consolidated Balance Sheet",
+        "period": "as at March 31, 2025",
+        "reporting_dates": [
+            "2025-03-31",
+            "2024-03-31"
+        ]
+    },
+    "rows": [
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Property, plant and equipment",
+            "normalized_label": "property_plant_equipment",
+            "note_reference": "3",
+            "values": {
+                "2025-03-31": 965.0,
+                "2024-03-31": 287.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Capital work-in-progress",
+            "normalized_label": "capital_work_in_progress",
+            "note_reference": "3",
+            "values": {
+                "2025-03-31": 51.0,
+                "2024-03-31": 18.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Right-of-use assets",
+            "normalized_label": "right_of_use_assets",
+            "note_reference": "31",
+            "values": {
+                "2025-03-31": 1918.0,
+                "2024-03-31": 690.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Goodwill",
+            "normalized_label": "goodwill",
+            "note_reference": "4",
+            "values": {
+                "2025-03-31": 5737.0,
+                "2024-03-31": 4717.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Other intangible assets",
+            "normalized_label": "other_intangible_assets",
+            "note_reference": "4",
+            "values": {
+                "2025-03-31": 912.0,
+                "2024-03-31": 754.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Investments",
+            "normalized_label": "investments",
+            "note_reference": "5",
+            "values": {
+                "2025-03-31": 10920.0,
+                "2024-03-31": 10365.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Other financial assets",
+            "normalized_label": "other_financial_assets",
+            "note_reference": "10",
+            "values": {
+                "2025-03-31": 2744.0,
+                "2024-03-31": 747.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Tax assets (net)",
+            "normalized_label": "tax_assets_net",
+            "note_reference": "11",
+            "values": {
+                "2025-03-31": 129.0,
+                "2024-03-31": 221.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "non_current",
+            "raw_label": "Other non-current assets",
+            "normalized_label": "other_non_current_assets",
+            "note_reference": "12",
+            "values": {
+                "2025-03-31": 546.0,
+                "2024-03-31": 99.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Inventories",
+            "normalized_label": "inventories",
+            "note_reference": "13",
+            "values": {
+                "2025-03-31": 176.0,
+                "2024-03-31": 88.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Investments",
+            "normalized_label": "investments",
+            "note_reference": "6",
+            "values": {
+                "2025-03-31": 2272.0,
+                "2024-03-31": 1280.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Trade receivables",
+            "normalized_label": "trade_receivables",
+            "note_reference": "7",
+            "values": {
+                "2025-03-31": 1946.0,
+                "2024-03-31": 794.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Cash and cash equivalents",
+            "normalized_label": "cash_and_cash_equivalents",
+            "note_reference": "8",
+            "values": {
+                "2025-03-31": 666.0,
+                "2024-03-31": 309.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Bank balances other than cash and cash equivalents",
+            "normalized_label": "bank_balances_other_than_cash_and_cash_equivalents",
+            "note_reference": "9",
+            "values": {
+                "2025-03-31": 2948.0,
+                "2024-03-31": 422.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Other financial assets",
+            "normalized_label": "other_financial_assets",
+            "note_reference": "10",
+            "values": {
+                "2025-03-31": 2769.0,
+                "2024-03-31": 2324.0
+            }
+        },
+        {
+            "section": "assets",
+            "classification": "current",
+            "raw_label": "Other current assets",
+            "normalized_label": "other_current_assets",
+            "note_reference": "12",
+            "values": {
+                "2025-03-31": 924.0,
+                "2024-03-31": 241.0
+            }
+        },
+        {
+            "section": "equity",
+            "classification": null,
+            "raw_label": "Equity share capital",
+            "normalized_label": "equity_share_capital",
+            "note_reference": "14(a)",
+            "values": {
+                "2025-03-31": 907.0,
+                "2024-03-31": 868.0
+            }
+        },
+        {
+            "section": "equity",
+            "classification": null,
+            "raw_label": "Other equity",
+            "normalized_label": "other_equity",
+            "note_reference": "14(b)",
+            "values": {
+                "2025-03-31": 29410.0,
+                "2024-03-31": 19545.0
+            }
+        },
+        {
+            "section": "equity",
+            "classification": null,
+            "raw_label": "Non-controlling interests",
+            "normalized_label": "non_controlling_interests",
+            "note_reference": null,
+            "values": {
+                "2025-03-31": -7.0,
+                "2024-03-31": -7.0
+            }
+        }
+    ],
+    "totals": {
+        "total_assets": {
+            "2025-03-31": 35623.0,
+            "2024-03-31": 23356.0
+        },
+        "total_equity": {
+            "2025-03-31": 30310.0,
+            "2024-03-31": 20406.0
+        },
+        "total_liabilities": {
+            "2025-03-31": null,
+            "2024-03-31": null
+        },
+        "total_equity_and_liabilities": {
+            "2025-03-31": null,
+            "2024-03-31": null
+        }
+    }
+}
