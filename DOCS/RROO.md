@@ -1,9 +1,6 @@
 # NFRA Financial Statement Compliance Validation System
 
 ## Complete Architecture & Workflow Documentation
-
-**Document Version:** 1.0  
-**Last Updated:** February 18, 2026
  
 ---
 
@@ -1146,12 +1143,3 @@ OUTPUT SCHEMA:
 
 ---
 
-## Document Revision History
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | 2026-02-18 | System | Initial documentation |
-
----
-
-*This document is auto-generated and should be updated when significant architectural changes are made.*
