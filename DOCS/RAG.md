@@ -1,65 +1,55 @@
+---
 
+# NFRA Deterministic Rule Engine — Implementation Instruction
 
 ---
 
-# 🔥 FINAL IMPLEMENTATION INSTRUCTION FOR COPILOT
+## Objective
 
-## NFRA Deterministic Rule Engine + Auto DB Setup
+The goal of this implementation is to:
 
-You are modifying my existing **Fin-LLM-NFRA** project.
-
-This is a full backend refactor.
-
----
-
-# 🎯 OBJECTIVE
-
-1. Convert RAG to deterministic metadata engine.
-2. Remove embeddings + similarity logic.
-3. Add `/ingest` endpoint.
-4. Add `/NFRA-QUERY` endpoint.
-5. Move all DB-related logic inside `DB/` folder.
-6. Automatically create database + tables from `.env`.
-7. No vector operations.
-8. Clean modular architecture.
+1. Convert the existing RAG system to a deterministic metadata engine.
+2. Remove all embedding and similarity logic.
+3. Add an `/ingest` endpoint.
+4. Add an `/NFRA-QUERY` endpoint.
+5. Move all database-related logic into the `DB/` folder.
+6. Automatically create the database and tables from `.env` configuration.
+7. Eliminate all vector operations.
+8. Maintain a clean, modular architecture.
 
 ---
 
-# 🧱 PROJECT STRUCTURE (MANDATORY)
-
-Refactor project to:
+## Project Structure
 
 ```
-    api/
-        main.py
-        ingest.py
-        nfra_query.py
+api/
+    main.py
+    ingest.py
+    nfra_query.py
 
-    rag/
-        pdf_parser.py
-        section_splitter.py
-        ingestion_service.py
-        retrieval_service.py
+rag/
+    pdf_parser.py
+    section_splitter.py
+    ingestion_service.py
+    retrieval_service.py
 
-    DB/
-        db_config.py
-        db_init.py
-        models.py
+DB/
+    db_config.py
+    db_init.py
+    models.py
 
 .env
 ```
 
-DO NOT mix DB logic inside rag folder.
-
-All database logic must stay inside `DB/`.
+Database logic must not be placed inside the `rag/` folder. All database logic stays inside `DB/`.
 
 ---
 
-# 🗄️ DATABASE CONFIGURATION
+## Database Configuration
 
-## 📌 1️⃣ Use .env
+### 1. Environment Variables
 
-Add:
+The `.env` file must contain the following:
 
 ```
 DB_HOST=localhost
@@ -69,29 +59,27 @@ DB_PASSWORD=postgres
 DB_NAME=nfra_db
 ```
 
-Use `python-dotenv` to load environment variables.
+`python-dotenv` is used to load these environment variables.
 
 ---
 
-## 📌 2️⃣ Database Auto Creation Logic
+### 2. Database Auto-Creation Logic
 
-In `DB/db_init.py`:
+In `DB/db_init.py`, the following sequence runs on application startup:
 
-When application starts:
+1. Connect to the default `postgres` database.
+2. Check whether `DB_NAME` exists.
+3. If it does not exist, create it.
+4. Connect to the created database.
+5. Create tables automatically if they do not already exist.
 
-1. Connect to default postgres database.
-2. Check if `DB_NAME` exists.
-3. If not → create it.
-4. Then connect to created DB.
-5. Create tables automatically if not exist.
+Database creation statement:
 
-Use:
-
-```python
+```sql
 CREATE DATABASE nfra_db;
 ```
 
-Then create table:
+Table creation statement:
 
 ```sql
 CREATE TABLE IF NOT EXISTS rules (
@@ -107,43 +95,43 @@ CREATE TABLE IF NOT EXISTS rules (
 );
 ```
 
-This must run automatically when app starts.
+This must execute automatically when the application starts.
 
 ---
 
-# 🧠 REMOVE VECTOR LOGIC
+## 3. Vector Logic as an Enhanced Alternative
 
-Completely delete:
+While the current implementation relies on deterministic keyword-based metadata filtering, vector logic represents a more advanced alternative that can be considered for improved retrieval performance in future iterations.
 
-* embedding generation
-* pgvector usage
-* similarity search
-* RRF ranking
-* vector columns
-* vector indexes
+If vector logic is adopted, the following components must be accounted for in the system design:
 
-There must be ZERO vector operations in this system.
+- Embedding generation
+- pgvector usage
+- Similarity search
+- RRF (Reciprocal Rank Fusion) ranking
+- Vector columns
+- Vector indexes
+
+The deterministic approach described in this document serves as the baseline implementation. Vector operations, when layered on top, can enhance recall for queries where exact metadata matches are insufficient.
 
 ---
 
-# 📌 INGEST ENDPOINT
+## 4. Ingest Endpoint
 
-## Route:
+**Route:**
 
 ```
 POST /ingest
 ```
 
-## Input:
+**Input:**
 
-* file: PDF (multipart/form-data)
-* rules: IndAS | SEBI | RBI | CompanyAct
+- `file`: PDF (multipart/form-data)
+- `rules`: one of `IndAS`, `SEBI`, `RBI`, or `CompanyAct`
 
----
+**Ingestion Flow:**
 
-## Ingestion Flow
-
-1. Use PyMuPDF:
+1. Use PyMuPDF to open the file:
 
 ```python
 import fitz
@@ -151,85 +139,75 @@ doc = fitz.open(file)
 ```
 
 2. Extract text page by page.
-3. Detect standard header using:
+
+3. Detect the standard header using the following pattern:
 
 ```
 Ind AS \d+,
 ```
 
-4. Extract:
-
-   * standard_code
-   * standard_number
-   * standard_name
+4. Extract the following fields:
+   - `standard_code`
+   - `standard_number`
+   - `standard_name`
 
 5. Detect sections using title-style detection.
 
-6. Chunk strictly:
+6. Chunk content strictly according to the following hierarchy:
 
 ```
 Standard → Section → Full Section Text
 ```
 
-One DB row per section.
+One database row per section. Token-based chunking and similarity logic are not used.
 
-NO token-based chunking.
-NO similarity logic.
+7. Insert records using the DB service inside `DB/`.
 
-7. Insert using DB service inside `DB/`.
+**Response:**
 
-Return:
-
-```
+```json
 {
   "message": "Ingestion successful",
-  "sections_inserted": count
+  "sections_inserted": <count>
 }
 ```
 
 ---
 
-# 📌 NFRA QUERY ENDPOINT
+## 5. NFRA Query Endpoint
 
-## Route:
+**Route:**
 
 ```
 POST /NFRA-QUERY
 ```
 
-## Input JSON:
+**Input JSON:**
 
-```
+```json
 {
-  "document_type": "IndAS",      // mandatory
-  "standard_code": "Ind AS 21",  // mandatory
-  "standard_number": 21,         // optional
-  "section_name": "Functional currency", // optional
-  "section_order": 2             // optional
+  "document_type": "IndAS",
+  "standard_code": "Ind AS 21",
+  "standard_number": 21,
+  "section_name": "Functional currency",
+  "section_order": 2
 }
 ```
 
----
+`document_type` and `standard_code` are mandatory. The remaining fields are optional.
 
-## Retrieval Logic
+**Retrieval Logic:**
 
-1. Validate:
+1. Validate that `document_type` and `standard_code` are present in the request.
+2. Build a dynamic SQL query starting with:
 
-   * document_type required
-   * standard_code required
-
-2. Build dynamic SQL:
-
-Base:
-
-```
+```sql
 WHERE document_type = ?
 AND standard_code = ?
 ```
+Optional filters are appended if the corresponding fields are provided.
 
-Add optional filters if provided.
-
-3. Return rows with:
+3. Return rows containing the following fields:
 
 ```
 document_type
@@ -242,78 +220,48 @@ chunk
 actual_text
 ```
 
-NO ranking.
-NO similarity.
-NO embeddings.
-
-Pure deterministic filtering.
+No ranking, similarity, or embeddings are used. The retrieval is purely deterministic SQL filtering.
 
 ---
 
-# 🗂 DB SERVICE DESIGN
-
-Inside `DB/`:
+## 6. DB Service Design
 
 ### db_config.py
 
-* Load .env
-* Create engine / connection pool
+- Loads the `.env` file.
+- Creates the database engine and connection pool.
 
 ### db_init.py
 
-* Create database if not exists
-* Create tables if not exist
-* Run on app startup
+- Creates the database if it does not exist.
+- Creates tables if they do not exist.
+- Runs automatically on application startup.
 
 ### models.py
 
-* Define rules table schema
-* Insert function
-* Query function
+- Defines the `rules` table schema.
+- Provides an insert function.
+- Provides a query function.
 
-Routes must call DB functions from DB folder only.
+Routes must call database functions from the `DB/` folder exclusively.
 
 ---
 
-# 🚀 APPLICATION STARTUP BEHAVIOR
+## 7. Application Startup Behavior
 
-When app runs:
+When the application runs, the startup sequence is as follows:
 
 1. Load environment variables.
-2. Initialize database.
-3. Create DB if not exists.
-4. Create tables if not exists.
-5. Then start FastAPI.
+2. Initialize the database.
+3. Create the database if it does not exist.
+4. Create tables if they do not exist.
+5. Start the FastAPI application.
 
 ---
 
-# 🛑 STRICT RULES
+## Expected Final Flow
 
-Do NOT:
-
-* Reintroduce vector search
-* Add embeddings
-* Add RAG similarity
-* Use old preprocessing module
-* Use old chunking file
-* Hardcode DB credentials
-* Mix DB logic inside rag folder
-
----
-
-# 🏆 FINAL SYSTEM
-
-You are building:
-
-NFRA Deterministic Regulatory Rule Engine
-
-Not semantic RAG.
-
----
-
-# 🔥 EXPECTED FINAL FLOW
-
-## Ingestion
+**Ingestion:**
 
 ```
 Upload PDF
@@ -323,7 +271,7 @@ Upload PDF
 → Store in DB
 ```
 
-## Retrieval
+**Retrieval:**
 
 ```
 POST /NFRA-QUERY
@@ -333,11 +281,10 @@ POST /NFRA-QUERY
 
 ---
 
-# 🎯 SUCCESS CRITERIA
+## Success Criteria
 
-* Database auto-creates
-* Tables auto-create
-* No vector usage
-* Clean modular structure
-* Ingestion works
-* Metadata filtering works
+- Database is auto-created on startup.
+- Tables are auto-created on startup.
+- Architecture is clean and modular.
+- Ingestion endpoint functions correctly.
+- Metadata filtering endpoint functions correctly.
