@@ -6,16 +6,15 @@
 
 ## Objective
 
-The goal of this implementation is to:
+The goal of this deterministic implementation is to:
 
-1. Convert the existing RAG system to a deterministic metadata engine.
-2. Remove all embedding and similarity logic.
-3. Add an `/ingest` endpoint.
-4. Add an `/NFRA-QUERY` endpoint.
-5. Move all database-related logic into the `DB/` folder.
-6. Automatically create the database and tables from `.env` configuration.
-7. Eliminate all vector operations.
-8. Maintain a clean, modular architecture.
+1. Enhance the existing RAG system by transitioning it towards a deterministic metadata engine with possibility to get back to RAG based system.
+2. Add an `/ingest` endpoint.
+3. Add an `/NFRA-QUERY` endpoint.
+4. Move all database-related logic into the `DB/` folder.
+5. Automatically create the database and tables from `.env` configuration.
+6. Eliminate all vector operations.
+7. Maintain a clean, modular architecture.
 
 ---
 
